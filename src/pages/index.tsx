@@ -8,7 +8,7 @@ import PublicationItem from '../components/PublicationItem'
 import { getLocaleFromPath, localizedPath, localeText } from '../content/i18n'
 import { journalArticles } from '../content/publications'
 import { profile, researchAreas } from '../content/portfolio'
-import { site } from '../content/site'
+import { basePath, site } from '../content/site'
 
 function ResearchMotif() {
   return (
@@ -51,10 +51,10 @@ export default function Home() {
                 <p className="hero__affiliation">{local(profile.affiliation)}</p>
                 <p className="hero__statement">{local(profile.statement)}</p>
                 <div className="hero__links">
-                  <LinkButton href={localizedPath('/research', locale)} filled>
+                  <LinkButton href={`${basePath}${localizedPath('/research', locale)}`} filled>
                     {locale === 'ko' ? '연구 보기' : 'Explore research'}
                   </LinkButton>
-                  <LinkButton href={localizedPath('/cv', locale)}>CV</LinkButton>
+                  <LinkButton href={`${basePath}${localizedPath('/cv', locale)}`}>CV</LinkButton>
                   <button onClick={copyEmail} className="link-btn" type="button">
                     {emailCopied ? labels.copied : labels.email}
                   </button>
@@ -80,7 +80,7 @@ export default function Home() {
                           title="LinkedIn"
                         >
                           <img
-                            src="/icons/linkedin-in-bug.png"
+                            src={`${basePath}/icons/linkedin-in-bug.png`}
                             alt=""
                             className="hero__contact-icon"
                             width="20"
@@ -100,14 +100,14 @@ export default function Home() {
                         >
                           <span className="hero__contact-picture" aria-hidden="true">
                             <img
-                              src="/icons/instagram-glyph-black.svg"
+                              src={`${basePath}/icons/instagram-glyph-black.svg`}
                               alt=""
                               className="hero__contact-icon hero__contact-icon--instagram hero__contact-icon--theme-light"
                               width="29"
                               height="29"
                             />
                             <img
-                              src="/icons/instagram-glyph-white.svg"
+                              src={`${basePath}/icons/instagram-glyph-white.svg`}
                               alt=""
                               className="hero__contact-icon hero__contact-icon--instagram hero__contact-icon--theme-dark"
                               width="29"
@@ -120,7 +120,7 @@ export default function Home() {
                   </address>
                 </div>
               </div>
-              <Image src="/headshot.png" alt={labels.headshotAlt} className="hero__headshot" width={320} height={400} priority />
+              <Image src={`${basePath}/headshot.png`} alt={labels.headshotAlt} className="hero__headshot" width={320} height={400} priority />
             </div>
           </div>
         </section>

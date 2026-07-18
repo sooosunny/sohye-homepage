@@ -521,7 +521,7 @@ html[data-theme="dark"] .theme-toggle__moon {
   width: 18px;
   height: 18px;
   background: currentColor;
-  mask: url("/icons/phone.svg") center / contain no-repeat;
+  mask: url("/sohye-portfolio/icons/phone.svg") center / contain no-repeat;
 }
 
 .hero__contact-icon--instagram {

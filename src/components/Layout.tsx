@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import { site } from '../content/site'
+import { basePath, site } from '../content/site'
 import { getLocaleFromPath, localizedPath, localeText } from '../content/i18n'
 
 function serializeStructuredData(value: object): string {
@@ -52,10 +52,10 @@ export default function Layout({
         <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="en" href={englishUrl} />
         <link rel="alternate" hrefLang="ko" href={koreanUrl} />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/svg+xml" href={`${basePath}/favicon.svg`} />
+        <link rel="icon" type="image/png" sizes="32x32" href={`${basePath}/favicon-32.png`} />
+        <link rel="icon" type="image/png" sizes="16x16" href={`${basePath}/favicon-16.png`} />
+        <link rel="apple-touch-icon" sizes="180x180" href={`${basePath}/apple-touch-icon.png`} />
 
         {/* Open Graph */}
         <meta property="og:title" content={pageTitle} />
