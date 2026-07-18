@@ -1,6 +1,3 @@
-import { generatedPublished, generatedWorkInProgress } from './cvGenerated'
-
-// allow: SIZE_OK - publication content combines generated CV normalization with fallback data.
 export type PublicationStatus =
   | 'Published'
   | 'Forthcoming'
@@ -10,290 +7,44 @@ export type PublicationStatus =
   | 'Working Paper'
   | 'In Progress'
 
-export interface Publication {
-  authors: string
-  year?: string
-  title: string
-  venue: string
-  volumeIssuePages?: string
-  doi?: string
-  url?: string
-  status: PublicationStatus
-  manuscriptAvailable?: boolean
+export type Publication = {
+  readonly authors: string
+  readonly year?: string
+  readonly title: string
+  readonly venue: string
+  readonly volumeIssuePages?: string
+  readonly doi?: string
+  readonly url?: string
+  readonly status: PublicationStatus
+  readonly manuscriptAvailable?: boolean
 }
 
-const fallbackJournalArticles: Publication[] = [
-  {
-    authors: 'Lee, Jina.',
-    year: 'Forthcoming',
-    title:
-      'The Gender of Scientific Authority: Novelty Claims and Gender Gaps in Scientific Impact Across Disciplines.',
-    venue: 'Gender & Society',
-    status: 'Forthcoming',
-  },
-  {
-    authors: 'Lee, Jina.',
-    year: '2025',
-    title:
-      'Gendered Pathways to Perpetual Fame: The Selection of Elite Novelists into the Korean Literary Canon.',
-    venue: 'Poetics',
-    volumeIssuePages: '112',
-    doi: 'https://doi.org/10.1016/j.poetic.2025.102024',
-    status: 'Published',
-  },
-  {
-    authors: 'Leahey, Erin, Jina Lee, Russell J. Funk.',
-    year: '2023',
-    title: 'What Types of Novelty Are Most Disruptive?',
-    venue: 'American Sociological Review',
-    volumeIssuePages: '88(3): 562-597',
-    doi: 'https://doi.org/10.1177/00031224231168074',
-    status: 'Published',
-  },
-  {
-    authors: 'Lee, Jina, Minjae Seo, Erin Leahey.',
-    year: '2022',
-    title:
-      'Who Deserves Protection? How Naming Potential Beneficiaries Influences COVID-19 Vaccine Intentions.',
-    venue: 'Socius',
-    volumeIssuePages: '8',
-    doi: 'https://doi.org/10.1177/23780231221082422',
-    status: 'Published',
-  },
-  {
-    authors: 'Zhao, Yi, Jina Lee, Cheryl Ellenwood.',
-    year: '2021',
-    title:
-      'The Persistent Influence of Gender Stereotypes in Social Entrepreneurial Financing.',
-    venue: 'Journal of Social Entrepreneurship',
-    volumeIssuePages: '15(3): 811-832',
-    doi: 'https://doi.org/10.1080/19420676.2021.2004206',
-    status: 'Published',
-  },
-]
+export const journalArticles: readonly Publication[] = [
+  { authors: 'Bae, S., Song, H. G., & Sunny, H. W.', year: '2026', title: 'From viewing to buying: How viewer attitudes and para-social bonds drive short food content purchase intentions.', venue: 'Culinary Science & Hospitality Research', volumeIssuePages: '32(2)', status: 'Forthcoming' },
+  { authors: 'Bae, S., & Park, G. G.', year: '2025', title: 'The Effects of Consumers’ Perceptions of ESG Management in Foodservice Franchises on Reuse Intention: An Ordered Probit Analysis.', venue: 'Culinary Science & Hospitality Research', volumeIssuePages: '31(12), 243–254', status: 'Published' },
+  { authors: 'Bae, S., & Park, G.', year: '2025', title: 'An Ordered Probit Analysis of the Factors Influencing Relationships among Cultural Heritage Tourism Motivation, Constraints, and Attitudes.', venue: 'FoodService Industry Journal', volumeIssuePages: '21(6), 431–454', status: 'Published' },
+  { authors: 'Bae, S., & Kim, I.', year: '2025', title: 'Comparative Analysis of Foreign Consumers’ Perceptions of K-Food Emotions: Focusing on Reddit Cases.', venue: 'The Journal of Internet Electronic Commerce Research', volumeIssuePages: '25(5), 121–131', status: 'Published' },
+  { authors: 'Lee, S., Bae, S., & Kim, I.', year: '2025', title: 'Exploring formation process of willingness to accept online personalised advertising for travel products.', venue: 'The e-Business Studies', volumeIssuePages: '26(2), 109–125', status: 'Published' },
+  { authors: 'Nam, J. H., Bae, S., & Kwon, E. K.', year: '2025', title: 'The impact of senior tourists’ package tour experiences on travel satisfaction, trust, and intention to pay premium.', venue: 'Journal of Tourism Enhancement', volumeIssuePages: '129–148', status: 'Published' },
+  { authors: 'Yoon, H., Bae, S., & Park, E.', year: '2025', title: 'Effects of Experiential Economic Factors on Emotional Attachment and Pro-Environmental Behaviour Among Nature-based Walking Tourists.', venue: 'Journal of Tourism Enhancement', volumeIssuePages: '13(1), 91–111', status: 'Published' },
+  { authors: 'Bae, S., & Kim, I.', year: '2024', title: 'Social Perception and Activation Strategies of Templestay: A Big Data Analysis.', venue: 'FoodService Industry Journal', volumeIssuePages: '20(6), 275–288', status: 'Published' },
+  { authors: 'Kim, I., & Bae, S.', year: '2024', title: 'The Effects of Motivation for Open-Kitchen Restaurants Adopting Robot Chefs on Consumer Attitude, Intentions to Use, and Word-of-Mouth.', venue: 'FoodService Industry Journal', volumeIssuePages: '20(6), 383–397', status: 'Published' },
+  { authors: 'Park, E., Bae, S., & Kim, I.', year: '2024', title: 'Exploring motivations influencing customers’ attitudes toward using reusable cups in eco-friendly coffee shops.', venue: 'Journal of Tourism Enhancement', volumeIssuePages: '167–184', status: 'Published' },
+  { authors: 'Kim, Y., Bae, S., & Kim, I.', year: '2024', title: 'Effects of Robotic Chefs’ Food Quality Prediction and Personal Innovativeness on Consumer Attitudes and Intention to Visit.', venue: 'Journal of Tourism Enhancement', volumeIssuePages: '12(3), 27–42', status: 'Published' },
+  { authors: 'Bae, S., Kim, J., Kim, D., & Kim, I.', year: '2024', title: 'Investigating benefits of operating shared kitchens for virtual restaurants: Small-business owner perspectives.', venue: 'Journal of Hospitality and Tourism Studies', volumeIssuePages: '26(4), 193–204', status: 'Published' },
+  { authors: 'Kang, S., Han, S. H., Bae, S. H., & Yoon, Y. H.', year: '2024', title: 'The effect of serving robots on attitude and behavioural intention of restaurant customers.', venue: 'Korean Journal of Franchise Management', volumeIssuePages: '15(2), 57–75', status: 'Published' },
+  { authors: 'Bae, S., & Kim, I.', year: '2024', title: 'Investigating barriers hindering attitude formation towards reusable cup usage in the coffee shop industry.', venue: 'FoodService Industry Journal', volumeIssuePages: '20(3), 119–131', status: 'Published' },
+  { authors: 'Bae, S., & Kim, I.', year: '2024', title: 'Exploring the structure of motivations, benefits and values of walking travel experience sharing on social media.', venue: 'Journal of Hospitality and Tourism Studies', volumeIssuePages: '26(2), 65–79', status: 'Published' },
+  { authors: 'Bae, S., Park, H., Kang, S., & Han, S.', year: '2023', title: 'How Usage Motivation Regarding Serving Robots Affect Customer Attitudes and Intent to Revisit Restaurants.', venue: 'FoodService Industry Journal', volumeIssuePages: '19(6), 281–295', status: 'Published' },
+  { authors: 'Bae, S., & Kim, I.', year: '2022', title: 'Importance-satisfaction Analysis for Campsite Selection Attributes after the COVID-19 Outbreak.', venue: 'Korean Journal of Hospitality & Tourism', volumeIssuePages: '31(4), 127–145', status: 'Published' },
+] as const
 
-const fallbackWorksInProgress: Publication[] = [
-  {
-    authors: 'Lee, Jina.',
-    title:
-      'The Gender of Scientific Authority: Novelty Claims and Gender Gaps in Scientific Impact Across Disciplines.',
-    venue: 'Gender & Society',
-    status: 'Conditionally Accepted',
-    manuscriptAvailable: false,
-  },
-  {
-    authors: 'Lee, Jina.',
-    title: 'The Theory Penalty: Gender Bias in Recognition of Scientific Novelty.',
-    venue: '',
-    status: 'Under Review',
-    manuscriptAvailable: true,
-  },
-  {
-    authors: 'Paik, Eugene T., Jina Lee, Erin Leahey, Russell Funk.',
-    title:
-      'Divide and Conquer? How Partitioned Audiences Shape the Impact of Domain-Spanning Innovation.',
-    venue: '',
-    status: 'Working Paper',
-    manuscriptAvailable: true,
-  },
-  {
-    authors: 'Lee, Jina.',
-    title:
-      'Who Faces More Doubt in Crisis? Gendered Patterns of Uncertainty in Reception of High-Stakes Science.',
-    venue: '',
-    status: 'In Progress',
-  },
-  {
-    authors:
-      'Bratt, Sarah, Erin Leahey, Yea-Eun Kwon, Charles Lassiter, Jina Lee, Charles Gomez.',
-    title:
-      'Do Journal Data Sharing Requirements Promote Humility in Scientific Articles?',
-    venue: '',
-    status: 'In Progress',
-  },
-]
+export const worksInProgress: readonly Publication[] = [
+  { authors: 'Bae, S., Lee, H., Soeiro, J. D., Shin, H., Metzger, P., & Kim, M. J.', year: '2026', title: 'Immersive Recovery Through Space Tourism: An Experimental Study on Psychological and Physiological Responses.', venue: 'Tourism Management', status: 'In Progress' },
+  { authors: 'Lee, H., Bae, S., Soeiro, J. D., Shin, H., Metzger, P., & Kim, M. J.', year: '2026', title: 'Does Microgravity-like VR Recalibrate Risk? Evidence from Underwater vs. Ground VR for Space Tourism.', venue: 'Annals of Tourism Research', status: 'In Progress' },
+  { authors: 'Park, G., Bae, S., Lee, H., Soeiro, J. D., Metzger, P., & Kim, M. J.', year: '2026', title: 'Estimating Consumer Preferences for Space Tourism Experiences.', venue: 'Journal of Travel Research', status: 'In Progress' },
+  { authors: 'Bae, S., Choi, H., Kim, N., Petrick, J. F., & Kim, M. J.', year: '2026', title: 'Space Flight Experience Interview.', venue: 'Annals of Tourism Research', status: 'In Progress' },
+  { authors: 'Bae, S., Lim, W. M., Lee, H., Hong, M., & Kim, M. J.', year: '2026', title: 'Space tourism bibliometric analysis: Sustainability, ethics & corporate social responsibility.', venue: 'Annals of Tourism Research', status: 'In Progress' },
+] as const
 
-const fallbackBookChapters: Publication[] = [
-  {
-    authors:
-      'Lassiter, Charles, Sarah Bratt, Erin Leahey, Charlie Gomez, Jina Lee, and Yeaeun Kwon.',
-    year: 'Forthcoming',
-    title:
-      'Humble Reflections on the Intellectual Process of Developing a Text-based Measure of Humility in Inquiry.',
-    venue: 'in Humble Inquiry: New Perspectives on Intellectual Humility',
-    volumeIssuePages:
-      'edited by Nathan Ballantyne, Jared Celniker, and Norbert Schwartz. Cambridge University Press',
-    status: 'Forthcoming',
-  },
-]
-
-const publicationStatuses: PublicationStatus[] = [
-  'Published',
-  'Forthcoming',
-  'Conditionally Accepted',
-  'Revise & Resubmit',
-  'Under Review',
-  'Working Paper',
-  'In Progress',
-]
-
-function ensureTrailingPeriod(text: string) {
-  return text.endsWith('.') ? text : `${text}.`
-}
-
-function cleanText(value: string | undefined) {
-  return value?.trim() ?? ''
-}
-
-function stripPublicationArtifacts(value: string | undefined) {
-  return cleanText(value).replace(/\.\s*Book Chapters\s*$/i, '')
-}
-
-function isGeneratedSectionLabel(pub: {
-  authors?: string
-  title?: string
-}) {
-  const authors = cleanText(pub.authors).toLowerCase()
-  const title = cleanText(pub.title)
-
-  return !title || authors === 'journal articles' || authors === 'book chapters'
-}
-
-function isBookChapterRecord(pub: {
-  authors?: string
-  title?: string
-  venue?: string
-}) {
-  const authors = cleanText(pub.authors).toLowerCase()
-  const title = cleanText(pub.title).toLowerCase()
-  const venue = cleanText(pub.venue).toLowerCase()
-
-  return (
-    authors.includes('charles lassiter') ||
-    title.startsWith(
-      'humble reflections on the intellectual process of developing a text-based measure of humility in inquiry'
-    ) ||
-    venue.startsWith('in humble inquiry:')
-  )
-}
-
-function splitBookChapterVenue(venue: string | undefined) {
-  const cleanedVenue = cleanText(venue)
-  const marker = ' edited by '
-  const markerIndex = cleanedVenue.toLowerCase().indexOf(marker)
-
-  if (markerIndex === -1) {
-    return {
-      venue: cleanedVenue,
-      volumeIssuePages: undefined,
-    }
-  }
-
-  return {
-    venue: cleanedVenue.slice(0, markerIndex),
-    volumeIssuePages: cleanedVenue.slice(markerIndex + 1),
-  }
-}
-
-function normalizeStatus(
-  value: string | undefined,
-  fallback: PublicationStatus
-): PublicationStatus {
-  if (!value) {
-    return fallback
-  }
-
-  const lowered = value.trim().toLowerCase()
-  const match = publicationStatuses.find(
-    (status) => status.toLowerCase() === lowered
-  )
-
-  if (match) {
-    return match
-  }
-
-  if (
-    lowered.includes('r&r') ||
-    lowered.includes('revise and resubmit') ||
-    lowered.includes('revise & resubmit')
-  ) {
-    return 'Revise & Resubmit'
-  }
-  if (lowered.includes('under review')) {
-    return 'Under Review'
-  }
-  if (lowered.includes('in progress')) {
-    return 'In Progress'
-  }
-  if (lowered.includes('working paper')) {
-    return 'Working Paper'
-  }
-  if (lowered.includes('forthcoming')) {
-    return 'Forthcoming'
-  }
-  if (lowered.includes('conditionally accepted')) {
-    return 'Conditionally Accepted'
-  }
-
-  return fallback
-}
-
-const generatedJournalArticles: Publication[] = generatedPublished
-  .filter((pub) => !isGeneratedSectionLabel(pub) && !isBookChapterRecord(pub))
-  .map((pub) => {
-    const fallbackStatus: PublicationStatus =
-      pub.year?.toLowerCase() === 'forthcoming' ? 'Forthcoming' : 'Published'
-
-    return {
-      authors: ensureTrailingPeriod(pub.authors),
-      year: pub.year,
-      title: ensureTrailingPeriod(pub.title),
-      venue: pub.venue ?? '',
-      volumeIssuePages: stripPublicationArtifacts(pub.volume_issue_pages) || undefined,
-      doi: pub.doi,
-      status: normalizeStatus(pub.status, fallbackStatus),
-    }
-  })
-  .filter((pub) => pub.title && pub.authors)
-
-const generatedBookChapters: Publication[] = generatedPublished
-  .filter((pub) => !isGeneratedSectionLabel(pub) && isBookChapterRecord(pub))
-  .map((pub) => {
-    const fallbackStatus: PublicationStatus =
-      pub.year?.toLowerCase() === 'forthcoming' ? 'Forthcoming' : 'Published'
-    const { venue, volumeIssuePages } = splitBookChapterVenue(pub.venue)
-
-    return {
-      authors: ensureTrailingPeriod(pub.authors),
-      year: pub.year,
-      title: ensureTrailingPeriod(pub.title),
-      venue,
-      volumeIssuePages,
-      doi: pub.doi,
-      status: normalizeStatus(pub.status, fallbackStatus),
-    }
-  })
-  .filter((pub) => pub.title && pub.authors)
-
-const generatedWip: Publication[] = generatedWorkInProgress
-  .map((pub) => ({
-    authors: ensureTrailingPeriod(pub.authors),
-    title: ensureTrailingPeriod(pub.title),
-    venue: pub.venue ?? '',
-    status: normalizeStatus(pub.status, 'Working Paper'),
-    manuscriptAvailable: pub.manuscript_available,
-  }))
-  .filter((pub) => pub.title && pub.authors)
-
-export const journalArticles: Publication[] =
-  generatedJournalArticles.length > 0
-    ? generatedJournalArticles
-    : fallbackJournalArticles
-
-export const bookChapters: Publication[] =
-  generatedBookChapters.length > 0
-    ? generatedBookChapters
-    : fallbackBookChapters
-
-export const worksInProgress: Publication[] =
-  generatedWip.length > 0 ? generatedWip : fallbackWorksInProgress
+export const bookChapters: readonly Publication[] = []

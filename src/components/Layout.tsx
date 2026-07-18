@@ -1,9 +1,17 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import { site } from '../content/site'
 import { getLocaleFromPath, localizedPath, localeText } from '../content/i18n'
+
+function serializeStructuredData(value: object): string {
+  return JSON.stringify(value).replace(/[<>&]/g, (character) => {
+    const codePoint = character.codePointAt(0)
+    return codePoint === undefined ? '' : `\\u${codePoint.toString(16).padStart(4, '0')}`
+  })
+}
 
 interface LayoutProps {
   children: React.ReactNode
@@ -21,13 +29,17 @@ export default function Layout({
   const router = useRouter()
   const locale = getLocaleFromPath(router.pathname)
   const labels = localeText[locale]
-  const pageTitle = title ? `${title} | ${labels.displayName}` : locale === 'ko' ? '이진아 | 사회학자' : site.title
+  const pageTitle = title ? `${title} | ${labels.displayName}` : locale === 'ko' ? '배소혜 | 관광 연구자' : site.title
   const pageDescription = description || site.description
   const pageImage = ogImage || site.socialPreview
   const canonicalPath = localizedPath(router.pathname, locale)
   const englishUrl = `${site.url}${localizedPath(router.pathname, 'en')}`
   const koreanUrl = `${site.url}${localizedPath(router.pathname, 'ko')}`
   const canonicalUrl = `${site.url}${canonicalPath}`
+
+  useEffect(() => {
+    document.documentElement.lang = locale
+  }, [locale])
 
   return (
     <>
@@ -59,41 +71,21 @@ export default function Layout({
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={pageImage} />
 
-        {/* Fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
-          rel="stylesheet"
-        />
-
-        {/* Structured data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+        <script type="application/ld+json">
+          {serializeStructuredData({
               '@context': 'https://schema.org',
               '@type': 'Person',
               name: site.name,
-              jobTitle: 'Assistant Professor of Sociology',
+              jobTitle: 'Postdoctoral Research Fellow',
               affiliation: {
                 '@type': 'Organization',
-                name: 'University of Illinois at Urbana-Champaign',
+                name: 'Pusan National University',
               },
               url: site.url,
               image: `${site.url}/headshot.png`,
-              sameAs: [site.googleScholar, site.orcid],
-            }),
-          }}
-        />
+              sameAs: [site.linkedin, site.instagram],
+            })}
+        </script>
       </Head>
       <Header />
       <main>{children}</main>

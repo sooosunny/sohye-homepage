@@ -1,10 +1,12 @@
 import { Publication, PublicationStatus } from '../content/publications'
 import { localeText, type Locale } from '../content/i18n'
 
-export function boldMyName(text: string) {
-  const parts = text.split(/(Lee,\s*Jina|Jina\s+Lee)/)
+function boldMyName(text: string) {
+  const parts = text.split(/(Bae,\s*S\.?(?:\s*H\.)?|Bae,\s*Sohye|Sohye\s+Bae)/)
   return parts.map((part, i) =>
-    /^(Lee,\s*Jina|Jina\s+Lee)$/.test(part) ? <strong key={i}>{part}</strong> : part
+    /^(Bae,\s*S\.?(?:\s*H\.)?|Bae,\s*Sohye|Sohye\s+Bae)$/.test(part)
+      ? <strong key={`${part}-${text.slice(0, i)}`}>{part}</strong>
+      : part
   )
 }
 

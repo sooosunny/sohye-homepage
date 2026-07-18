@@ -7,9 +7,17 @@ const FONT_SCALE_SCRIPT = `
 try {
   var s = parseFloat(localStorage.getItem('jl-font-scale'));
   if (s && s > 0.5 && s < 2 && s !== 1) {
-    document.documentElement.style.fontSize = (125 * s) + '%';
+    document.documentElement.style.fontSize = (112.5 * s) + '%';
   }
 } catch (e) {}
+`
+
+const THEME_SCRIPT = `
+var storedTheme = localStorage.getItem('sb-theme');
+var theme = storedTheme === 'dark' || storedTheme === 'light'
+  ? storedTheme
+  : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+document.documentElement.dataset.theme = theme;
 `
 
 export default function Document({ __NEXT_DATA__ }: DocumentProps) {
@@ -20,6 +28,7 @@ export default function Document({ __NEXT_DATA__ }: DocumentProps) {
   return (
     <Html lang={lang}>
       <Head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: FONT_SCALE_SCRIPT }} />
       </Head>
       <body>

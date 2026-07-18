@@ -2,15 +2,15 @@ export type Locale = 'en' | 'ko'
 
 export const localeText = {
   en: {
-    displayName: 'Jina Lee',
+    displayName: 'Sohye Bae',
     home: 'Home',
     research: 'Research',
-    teaching: 'Teaching',
+    teaching: 'Experience',
     cv: 'CV',
     about: 'About',
     publications: 'Publications',
-    teachingPreview: 'Teaching',
-    teachingLink: 'Teaching →',
+    teachingPreview: 'Professional Experience',
+    teachingLink: 'View experience →',
     keyQuestions: 'Key questions',
     relatedWork: 'Related work',
     teachingPhilosophy: 'Teaching Philosophy',
@@ -19,7 +19,7 @@ export const localeText = {
     activitiesFor: 'Activities for',
     cvTitle: 'Curriculum Vitae',
     cvDescription:
-      'Curriculum vitae of Jina Lee, Assistant Professor of Sociology at the University of Illinois at Urbana-Champaign.',
+      'Curriculum vitae of Sohye Bae, tourism researcher at Pusan National University.',
     cvDownload: 'Download CV (PDF)',
     cvOpenPdf: 'Open PDF in New Tab',
     lastUpdated: 'Last updated',
@@ -51,26 +51,26 @@ export const localeText = {
     openMenu: 'Open navigation menu',
     closeMenu: 'Close navigation menu',
     homeDescription:
-      'Assistant Professor of Sociology at the University of Illinois at Urbana-Champaign. Research on gender inequality in evaluation systems across scientific and cultural fields.',
-    profileTitle: 'Assistant Professor of Sociology',
+      'Tourism researcher studying technology, sustainability, hospitality, consumer behavior, and space tourism.',
+    profileTitle: 'Postdoctoral Research Fellow',
     positioningStatement:
-      'I study how evaluation systems reproduce gender inequality in science and in cultural fields.',
-    headshotAlt: 'Jina Lee, Assistant Professor of Sociology',
+      'I study how technology, sustainability, and emerging experiences reshape tourism and hospitality.',
+    headshotAlt: '관광 연구자 배소혜의 프로필 사진',
     researchDescription:
-      'Research programs on gender inequality in evaluation systems across scientific and cultural fields.',
+      'Research on technology, sustainability, culture, hospitality, and space tourism.',
     teachingDescription:
-      'Teaching philosophy, courses, and classroom activities in sociology of culture, sociology of gender, social statistics, and technology and society.',
+      'Research projects, awards, training, and professional activities.',
   },
   ko: {
-    displayName: '이진아',
+    displayName: '배소혜',
     home: '홈',
     research: '연구',
-    teaching: '강의',
+    teaching: '경력',
     cv: 'CV',
     about: '소개',
     publications: '논문',
-    teachingPreview: '강의',
-    teachingLink: '강의 보기 →',
+    teachingPreview: '주요 경력',
+    teachingLink: '경력 보기 →',
     keyQuestions: '핵심 질문',
     relatedWork: '관련 연구',
     teachingPhilosophy: '강의 철학',
@@ -79,7 +79,7 @@ export const localeText = {
     activitiesFor: '수업 활동:',
     cvTitle: 'Curriculum Vitae',
     cvDescription:
-      'Jina Lee의 영문 이력서입니다. 일리노이대학교 어배너-섐페인 사회학과 조교수입니다.',
+      '부산대학교 관광 연구자 배소혜의 온라인 이력서입니다.',
     cvDownload: '영문 CV 다운로드 (PDF)',
     cvOpenPdf: '영문 PDF 새 탭에서 열기',
     lastUpdated: '최근 업데이트',
@@ -111,15 +111,15 @@ export const localeText = {
     openMenu: '메뉴 열기',
     closeMenu: '메뉴 닫기',
     homeDescription:
-      '일리노이대학교 어배너-섐페인 사회학과 조교수. 과학과 문화의 평가 체계에서 나타나는 젠더 불평등을 연구합니다.',
-    profileTitle: '사회학과 조교수',
+      '기술, 지속가능성, 호스피탈리티, 소비자 행동, 우주관광을 연구하는 관광학 연구자입니다.',
+    profileTitle: '박사후연구원',
     positioningStatement:
-      '저는 과학과 문화의 평가 체계가 젠더 불평등을 어떻게 재생산하는지 연구합니다.',
-    headshotAlt: '사회학과 조교수 이진아',
+      '기술, 지속가능성, 새로운 경험이 관광과 호스피탈리티를 어떻게 변화시키는지 연구합니다.',
+    headshotAlt: '관광 연구자 배소혜',
     researchDescription:
-      '과학과 문화의 평가 체계에서 나타나는 젠더 불평등에 관한 연구입니다.',
+      '기술, 지속가능성, 문화, 호스피탈리티, 우주관광에 관한 연구입니다.',
     teachingDescription:
-      '문화사회학, 젠더사회학, 사회통계학, 기술과 사회를 다루는 강의 철학과 과목 및 수업 활동입니다.',
+      '연구용역, 수상, 교육 수료, 전문 활동을 소개합니다.',
   },
 } as const
 

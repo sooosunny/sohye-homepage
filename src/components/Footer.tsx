@@ -25,12 +25,22 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href={site.orcid}
+                href={site.linkedin}
                 className="footer__link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                ORCID
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                href={site.instagram}
+                className="footer__link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
               </a>
             </li>
             <li>

@@ -16,6 +16,7 @@ out/
 # Logs
 *.log
 npm-debug.log*
+*.tsbuildinfo
 
 # Local drafts and source documents
 private/
