@@ -79,14 +79,7 @@ export default function Home() {
                           aria-label={locale === 'ko' ? 'LinkedIn 프로필 열기' : 'Open LinkedIn profile'}
                           title="LinkedIn"
                         >
-                          <img
-                            src={`${basePath}/site-icons/linkedin-in-bug.png`}
-                            alt=""
-                            className="hero__contact-icon"
-                            width="20"
-                            height="20"
-                            aria-hidden="true"
-                          />
+                          <span className="hero__contact-icon hero__contact-icon--linkedin" aria-hidden="true" />
                         </a>
                       </li>
                       <li>
@@ -98,22 +91,7 @@ export default function Home() {
                           aria-label={locale === 'ko' ? 'Instagram 프로필 열기' : 'Open Instagram profile'}
                           title="Instagram"
                         >
-                          <span className="hero__contact-picture" aria-hidden="true">
-                            <img
-                              src={`${basePath}/site-icons/instagram-glyph-black.svg`}
-                              alt=""
-                              className="hero__contact-icon hero__contact-icon--instagram hero__contact-icon--theme-light"
-                              width="29"
-                              height="29"
-                            />
-                            <img
-                              src={`${basePath}/site-icons/instagram-glyph-white.svg`}
-                              alt=""
-                              className="hero__contact-icon hero__contact-icon--instagram hero__contact-icon--theme-dark"
-                              width="29"
-                              height="29"
-                            />
-                          </span>
+                          <span className="hero__contact-icon hero__contact-icon--instagram" aria-hidden="true" />
                         </a>
                       </li>
                     </ul>
