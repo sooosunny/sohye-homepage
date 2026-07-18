@@ -80,7 +80,7 @@ export default function Home() {
                           title="LinkedIn"
                         >
                           <img
-                            src={`${basePath}/icons/linkedin-in-bug.png`}
+                            src={`${basePath}/site-icons/linkedin-in-bug.png`}
                             alt=""
                             className="hero__contact-icon"
                             width="20"
@@ -100,14 +100,14 @@ export default function Home() {
                         >
                           <span className="hero__contact-picture" aria-hidden="true">
                             <img
-                              src={`${basePath}/icons/instagram-glyph-black.svg`}
+                              src={`${basePath}/site-icons/instagram-glyph-black.svg`}
                               alt=""
                               className="hero__contact-icon hero__contact-icon--instagram hero__contact-icon--theme-light"
                               width="29"
                               height="29"
                             />
                             <img
-                              src={`${basePath}/icons/instagram-glyph-white.svg`}
+                              src={`${basePath}/site-icons/instagram-glyph-white.svg`}
                               alt=""
                               className="hero__contact-icon hero__contact-icon--instagram hero__contact-icon--theme-dark"
                               width="29"

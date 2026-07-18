@@ -1,6 +1,6 @@
 import { profile } from './portfolio'
 
-export const basePath = '/sohye-homepage'
+export const basePath = ''
 
 export const site = {
   name: profile.name,
