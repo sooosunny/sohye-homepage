@@ -511,6 +511,38 @@ html[data-theme="dark"] .theme-toggle__moon {
 
 .hero__contact-icon {
   flex: 0 0 auto;
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.hero__contact-icon--phone {
+  width: 18px;
+  height: 18px;
+  background: currentColor;
+  mask: url("/icons/phone.svg") center / contain no-repeat;
+}
+
+.hero__contact-icon--instagram {
+  width: 29px;
+  height: 29px;
+}
+
+.hero__contact-picture {
+  display: block;
+}
+
+.hero__contact-icon--theme-dark {
+  display: none;
+}
+
+html[data-theme="dark"] .hero__contact-icon--theme-light {
+  display: none;
+}
+
+html[data-theme="dark"] .hero__contact-icon--theme-dark {
+  display: block;
 }
 
 .hero__headshot {
