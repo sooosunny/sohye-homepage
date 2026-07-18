@@ -1,13 +1,13 @@
 import { profile } from './portfolio'
 
-export const basePath = '/sohye-portfolio'
+export const basePath = '/sohye-homepage'
 
 export const site = {
   name: profile.name,
   title: 'Sohye Bae | Tourism Researcher',
   description:
     'Tourism researcher studying technology, sustainability, consumer behavior, hospitality, and space tourism.',
-  url: 'https://cameleonh.github.io/sohye-portfolio',
+  url: 'https://cameleonh.github.io/sohye-homepage',
   email: profile.email,
   cvUrl: `${basePath}/cv/`,
   googleScholar: 'https://scholar.pusan.ac.kr',

@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/sohye-portfolio',
+  basePath: '/sohye-homepage',
   output: 'export',
   trailingSlash: true,
   images: {
