@@ -78,7 +78,7 @@ Spacing uses the existing 4px-based scale from `--space-1` through `--space-24`.
 
 - **Structure**: a fixed `--space-8` icon button using sun and moon SVGs.
 - **States**: light, dark, hover, and focus-visible.
-- **Behavior**: follows the operating-system preference on first visit and persists an explicit user choice without a first-paint flash.
+- **Behavior**: starts in light mode on first visit and persists an explicit user choice without a first-paint flash.
 - **Accessibility**: localized action label announces the mode the button will activate.
 
 ### Link button

@@ -16,7 +16,7 @@ const THEME_SCRIPT = `
 var storedTheme = localStorage.getItem('sb-theme');
 var theme = storedTheme === 'dark' || storedTheme === 'light'
   ? storedTheme
-  : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  : 'light';
 document.documentElement.dataset.theme = theme;
 `
 
