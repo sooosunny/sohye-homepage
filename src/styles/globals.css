@@ -355,12 +355,14 @@ html[data-theme="dark"] .theme-toggle__moon {
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  grid-template-areas: "visual copy";
   gap: var(--space-12);
   align-items: center;
 }
 
 .about-copy {
   min-width: 0;
+  grid-area: copy;
 }
 
 .about-lead {
@@ -373,7 +375,8 @@ html[data-theme="dark"] .theme-toggle__moon {
 .about-visual {
   width: min(100%, 360px);
   margin: 0;
-  justify-self: end;
+  justify-self: start;
+  grid-area: visual;
   overflow: hidden;
   border: 1px solid var(--color-border-light);
   border-radius: 12px;
@@ -1333,6 +1336,7 @@ button.footer__link {
 
   .about-grid {
     grid-template-columns: 1fr;
+    grid-template-areas: "copy" "visual";
     gap: var(--space-8);
   }
 
