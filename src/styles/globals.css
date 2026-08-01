@@ -352,41 +352,11 @@ html[data-theme="dark"] .theme-toggle__moon {
   margin-bottom: var(--space-3);
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
-  grid-template-areas: "visual copy";
-  gap: var(--space-12);
-  align-items: center;
-}
-
-.about-copy {
-  min-width: 0;
-  grid-area: copy;
-}
-
 .about-lead {
   max-width: 62ch;
   font-family: var(--font-serif);
   font-size: 1.3rem;
   line-height: 1.6;
-}
-
-.about-visual {
-  width: min(100%, 360px);
-  margin: 0;
-  justify-self: start;
-  grid-area: visual;
-  overflow: hidden;
-  border: 1px solid var(--color-border-light);
-  border-radius: 12px;
-  background: var(--color-surface);
-}
-
-.about-visual img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .topic-list {
@@ -646,10 +616,33 @@ button.footer__link {
 }
 
 /* ===== Research Cards ===== */
+.research-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+  gap: var(--space-10);
+  align-items: start;
+}
+
 .research-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: var(--space-5);
+}
+
+.research-visual {
+  width: min(100%, 300px);
+  margin: 0;
+  justify-self: end;
+  overflow: hidden;
+  border: 1px solid var(--color-border-light);
+  border-radius: 12px;
+  background: var(--color-surface);
+}
+
+.research-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .research-card {
@@ -1334,13 +1327,12 @@ button.footer__link {
     gap: var(--space-8);
   }
 
-  .about-grid {
+  .research-layout {
     grid-template-columns: 1fr;
-    grid-template-areas: "copy" "visual";
     gap: var(--space-8);
   }
 
-  .about-visual {
+  .research-visual {
     justify-self: start;
   }
 

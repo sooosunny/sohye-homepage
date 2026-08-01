@@ -105,38 +105,36 @@ export default function Home() {
 
         <section className="section" aria-labelledby="about-heading">
           <div className="container container--wide">
-            <div className="about-grid">
-              <div className="about-copy">
-                <p className="section__heading" id="about-heading">{labels.about}</p>
-                <p className="about-lead">{local(profile.about)}</p>
-              </div>
-              <figure className="about-visual">
-                <Image
-                  src={`${basePath}/about-astronaut.png`}
-                  alt={locale === 'ko' ? '우주를 배경으로 한 배 박사 일러스트' : 'Illustrated portrait of Dr. Bae as an astronaut'}
-                  width={360}
-                  height={360}
-                  sizes="(max-width: 768px) 100vw, 360px"
-                />
-              </figure>
-            </div>
+            <p className="section__heading" id="about-heading">{labels.about}</p>
+            <p className="about-lead">{local(profile.about)}</p>
           </div>
         </section>
 
         <section className="section section--bordered" aria-labelledby="areas-heading">
           <div className="container container--wide">
             <p className="section__heading" id="areas-heading">{labels.research}</p>
-            <div className="research-grid">
-              {researchAreas.map((area) => (
-                <article className="research-card" key={area.id}>
-                  <p className="research-card__index">0{researchAreas.indexOf(area) + 1}</p>
-                  <h2 className="research-card__title">{local(area.title)}</h2>
-                  <p className="research-card__desc">{local(area.description)}</p>
-                  <ul className="topic-list" aria-label={local(area.title)}>
-                    {area.topics.map((topic) => <li key={topic}>{topic}</li>)}
-                  </ul>
-                </article>
-              ))}
+            <div className="research-layout">
+              <div className="research-grid">
+                {researchAreas.map((area) => (
+                  <article className="research-card" key={area.id}>
+                    <p className="research-card__index">0{researchAreas.indexOf(area) + 1}</p>
+                    <h2 className="research-card__title">{local(area.title)}</h2>
+                    <p className="research-card__desc">{local(area.description)}</p>
+                    <ul className="topic-list" aria-label={local(area.title)}>
+                      {area.topics.map((topic) => <li key={topic}>{topic}</li>)}
+                    </ul>
+                  </article>
+                ))}
+              </div>
+              <figure className="research-visual">
+                <Image
+                  src={`${basePath}/about-astronaut.png`}
+                  alt={locale === 'ko' ? '우주를 배경으로 한 배 박사 일러스트' : 'Illustrated portrait of Dr. Bae as an astronaut'}
+                  width={300}
+                  height={300}
+                  sizes="(max-width: 768px) 100vw, 300px"
+                />
+              </figure>
             </div>
             <Link href={localizedPath('/research', locale)} className="text-link">
               {locale === 'ko' ? '연구 프로그램 자세히 보기 →' : 'View research programs →'}
