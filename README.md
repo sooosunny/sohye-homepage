@@ -1,4 +1,4 @@
-# jinalee.org — Academic Personal Website
+# Academic Personal Website
 
 A clean, professional, static academic website built with Next.js.
 
@@ -72,7 +72,6 @@ preview sections.
 | Update research narratives / teaching text (local only) | `site-content.docx` |
 | Regenerate Korean site narratives / teaching text | `npm run generate:content:ko` |
 | Refresh public generated data | `npm run refresh:content` |
-| Replace downloadable PDF CV | `public/JinaLee_CV.pdf` |
 | Update links (Scholar, ORCID) | `src/content/site.ts` |
 
 ## Adding Your Headshot
@@ -83,7 +82,7 @@ serve. The homepage already references that asset:
 ```tsx
 <img
   src="/headshot.png"
-  alt="Jina Lee, Assistant Professor of Sociology"
+  alt="Academic profile photo"
   className="hero__headshot"
   width={180}
   height={220}
@@ -111,6 +110,5 @@ src/
 scripts/
   cv/           CV parsing scripts
 public/
-  JinaLee_CV.pdf  CV page source PDF
   headshot.png  Public homepage photo
 ```
