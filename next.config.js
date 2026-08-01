@@ -5,6 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Keep production bundles from exposing source maps in the deployed site.
+  productionBrowserSourceMaps: false,
 }
 
 module.exports = nextConfig

@@ -111,6 +111,21 @@ googleScholar: 'https://scholar.google.com/citations?user=YOUR_ACTUAL_ID',
 orcid: 'https://orcid.org/YOUR-ACTUAL-ORCID',
 ```
 
+## Copyguard hardening
+
+The site includes lightweight copyguard hardening: AI crawler opt-out signals
+in `public/robots.txt`, a supplemental `public/ai.txt` policy, `noai` and
+`noimageai` metadata, a unique `cg-canary` marker for clone detection, an
+informational `/dmca/` contact page, and production source-map suppression.
+
+These measures raise copying and attribution costs but cannot prevent copying
+of content that a browser renders. The site is deployed as a static GitHub
+Pages export, so response-header protections such as CSP `frame-ancestors` and
+`X-Frame-Options` must be configured at a host or proxy that supports custom
+headers; they are not enforced by this repository alone. Right-click and
+whole-page copy blocking are intentionally omitted because they are easy to
+bypass and harm accessibility, SEO, and normal use.
+
 ## Project Structure
 
 ```

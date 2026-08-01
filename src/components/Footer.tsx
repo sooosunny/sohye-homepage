@@ -46,6 +46,11 @@ export default function Footer() {
             <li>
               <CopyEmail email={site.email} className="footer__link" locale={locale} />
             </li>
+            <li>
+              <a href="/dmca/" className="footer__link">
+                Copyright / DMCA
+              </a>
+            </li>
           </ul>
         </div>
       </div>

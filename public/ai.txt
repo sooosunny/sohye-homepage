@@ -1,0 +1,11 @@
+# AI usage policy for dr-sohye.shop
+#
+# The site's public pages are intended for human browsing and academic
+# attribution. Do not use this site or its assets for model training,
+# retrieval-augmented generation, dataset construction, or automated cloning
+# without the copyright holder's permission.
+#
+# This file is a policy signal. It cannot stop a crawler that ignores it.
+
+User-Agent: *
+Disallow: /

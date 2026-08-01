@@ -49,6 +49,8 @@ export default function Layout({
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <meta name="author" content={site.name} />
+        <meta name="robots" content="index, follow, noai, noimageai" />
+        <meta name="cg-canary" content={site.canary} />
         <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="en" href={englishUrl} />
         <link rel="alternate" hrefLang="ko" href={koreanUrl} />

@@ -4,6 +4,7 @@ export const basePath = ''
 
 export const site = {
   name: profile.name,
+  canary: 'cg-sohye-20260801-bae-tourism',
   title: 'Sohye Bae | Tourism Researcher',
   description:
     'Tourism researcher studying technology, sustainability, consumer behavior, hospitality, and space tourism.',
