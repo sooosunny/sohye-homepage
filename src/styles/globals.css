@@ -352,11 +352,38 @@ html[data-theme="dark"] .theme-toggle__moon {
   margin-bottom: var(--space-3);
 }
 
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.about-copy {
+  min-width: 0;
+}
+
 .about-lead {
   max-width: 62ch;
   font-family: var(--font-serif);
   font-size: 1.3rem;
   line-height: 1.6;
+}
+
+.about-visual {
+  width: min(100%, 360px);
+  margin: 0;
+  justify-self: end;
+  overflow: hidden;
+  border: 1px solid var(--color-border-light);
+  border-radius: 12px;
+  background: var(--color-surface);
+}
+
+.about-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .topic-list {
@@ -1302,6 +1329,15 @@ button.footer__link {
   .hero__inner {
     grid-template-columns: 1fr;
     gap: var(--space-8);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .about-visual {
+    justify-self: start;
   }
 
   .hero__motif {

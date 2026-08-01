@@ -105,8 +105,21 @@ export default function Home() {
 
         <section className="section" aria-labelledby="about-heading">
           <div className="container container--wide">
-            <p className="section__heading" id="about-heading">{labels.about}</p>
-            <p className="about-lead">{local(profile.about)}</p>
+            <div className="about-grid">
+              <div className="about-copy">
+                <p className="section__heading" id="about-heading">{labels.about}</p>
+                <p className="about-lead">{local(profile.about)}</p>
+              </div>
+              <figure className="about-visual">
+                <Image
+                  src={`${basePath}/about-astronaut.png`}
+                  alt={locale === 'ko' ? '우주를 배경으로 한 배 박사 일러스트' : 'Illustrated portrait of Dr. Bae as an astronaut'}
+                  width={360}
+                  height={360}
+                  sizes="(max-width: 768px) 100vw, 360px"
+                />
+              </figure>
+            </div>
           </div>
         </section>
 
