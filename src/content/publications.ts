@@ -1,3 +1,10 @@
+import { profile } from './portfolio'
+import {
+  generatedPublished,
+  generatedWorkInProgress,
+  type CvPublication,
+} from './cvGenerated'
+
 export type PublicationStatus =
   | 'Published'
   | 'Forthcoming'
@@ -19,7 +26,7 @@ export type Publication = {
   readonly manuscriptAvailable?: boolean
 }
 
-export const journalArticles: readonly Publication[] = [
+const fallbackJournalArticles: readonly Publication[] = [
   { authors: 'Bae, S., Song, H. G., & Sunny, H. W.', year: '2026', title: 'From viewing to buying: How viewer attitudes and para-social bonds drive short food content purchase intentions.', venue: 'Culinary Science & Hospitality Research', volumeIssuePages: '32(2)', status: 'Forthcoming' },
   { authors: 'Bae, S., & Park, G. G.', year: '2025', title: 'The Effects of Consumers’ Perceptions of ESG Management in Foodservice Franchises on Reuse Intention: An Ordered Probit Analysis.', venue: 'Culinary Science & Hospitality Research', volumeIssuePages: '31(12), 243–254', status: 'Published' },
   { authors: 'Bae, S., & Park, G.', year: '2025', title: 'An Ordered Probit Analysis of the Factors Influencing Relationships among Cultural Heritage Tourism Motivation, Constraints, and Attitudes.', venue: 'FoodService Industry Journal', volumeIssuePages: '21(6), 431–454', status: 'Published' },
@@ -39,12 +46,62 @@ export const journalArticles: readonly Publication[] = [
   { authors: 'Bae, S., & Kim, I.', year: '2022', title: 'Importance-satisfaction Analysis for Campsite Selection Attributes after the COVID-19 Outbreak.', venue: 'Korean Journal of Hospitality & Tourism', volumeIssuePages: '31(4), 127–145', status: 'Published' },
 ] as const
 
-export const worksInProgress: readonly Publication[] = [
+const fallbackWorksInProgress: readonly Publication[] = [
   { authors: 'Bae, S., Lee, H., Soeiro, J. D., Shin, H., Metzger, P., & Kim, M. J.', year: '2026', title: 'Immersive Recovery Through Space Tourism: An Experimental Study on Psychological and Physiological Responses.', venue: 'Tourism Management', status: 'In Progress' },
   { authors: 'Lee, H., Bae, S., Soeiro, J. D., Shin, H., Metzger, P., & Kim, M. J.', year: '2026', title: 'Does Microgravity-like VR Recalibrate Risk? Evidence from Underwater vs. Ground VR for Space Tourism.', venue: 'Annals of Tourism Research', status: 'In Progress' },
   { authors: 'Park, G., Bae, S., Lee, H., Soeiro, J. D., Metzger, P., & Kim, M. J.', year: '2026', title: 'Estimating Consumer Preferences for Space Tourism Experiences.', venue: 'Journal of Travel Research', status: 'In Progress' },
   { authors: 'Bae, S., Choi, H., Kim, N., Petrick, J. F., & Kim, M. J.', year: '2026', title: 'Space Flight Experience Interview.', venue: 'Annals of Tourism Research', status: 'In Progress' },
   { authors: 'Bae, S., Lim, W. M., Lee, H., Hong, M., & Kim, M. J.', year: '2026', title: 'Space tourism bibliometric analysis: Sustainability, ethics & corporate social responsibility.', venue: 'Annals of Tourism Research', status: 'In Progress' },
 ] as const
+
+const publicationStatuses = new Set<PublicationStatus>([
+  'Published',
+  'Forthcoming',
+  'Conditionally Accepted',
+  'Revise & Resubmit',
+  'Under Review',
+  'Working Paper',
+  'In Progress',
+])
+
+function toPublication(raw: CvPublication): Publication {
+  const status = publicationStatuses.has(raw.status as PublicationStatus)
+    ? raw.status as PublicationStatus
+    : 'Published'
+
+  return {
+    authors: raw.authors,
+    year: raw.year || undefined,
+    title: raw.title,
+    venue: raw.venue || '',
+    volumeIssuePages: raw.volume_issue_pages,
+    doi: raw.doi,
+    status,
+    manuscriptAvailable: raw.manuscript_available,
+  }
+}
+
+function belongsToCurrentProfile(items: readonly CvPublication[]): boolean {
+  const surname = profile.name.trim().split(/\s+/).slice(-1)[0]?.toLowerCase()
+  if (!surname) return false
+
+  return items.some((item) =>
+    item.title.trim() && item.authors.toLowerCase().includes(surname),
+  )
+}
+
+// The generated JSON is the Word-derived source of truth once it belongs to
+// this profile. The fallback protects the site from an old generated snapshot
+// left over from a different profile until `npm run generate:cv` is run.
+const generatedPublications = [...generatedPublished, ...generatedWorkInProgress]
+const useGeneratedPublications = belongsToCurrentProfile(generatedPublications)
+
+export const journalArticles: readonly Publication[] = useGeneratedPublications
+  ? generatedPublished.filter((item) => item.title.trim()).map(toPublication)
+  : fallbackJournalArticles
+
+export const worksInProgress: readonly Publication[] = useGeneratedPublications
+  ? generatedWorkInProgress.filter((item) => item.title.trim()).map(toPublication)
+  : fallbackWorksInProgress
 
 export const bookChapters: readonly Publication[] = []

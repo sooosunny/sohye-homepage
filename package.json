@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "generate:cv": "python3 scripts/cv/parse_docx.py --input public/cv.docx --output src/generated/cv-data.json",
+    "refresh:publications": "npm run generate:cv",
     "generate:content": "python3 scripts/cv/parse_site_content.py --input site-content.docx --output src/generated/site-content.json",
     "generate:content:ko": "python3 scripts/cv/create_korean_site_content.py --input site-content.docx --output site-content-ko.docx && python3 scripts/cv/parse_site_content.py --input site-content-ko.docx --output src/generated/site-content-ko.json",
     "refresh:site-content": "npm run generate:content && npm run generate:content:ko && npm run check:content-sync",

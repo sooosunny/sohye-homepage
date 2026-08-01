@@ -38,6 +38,19 @@ The Research page lists publications by title under each program; each title is
 matched against the parsed CV, so statuses/DOIs update from `public/cv.docx` alone.
 Course offerings on the Teaching page also come from the CV.
 
+### Publication-only update
+
+To update the Publications page from the local CV without refreshing the site
+narratives:
+
+1. Edit the `PUBLICATIONS` and `WORK IN PROGRESS` sections in `public/cv.docx`.
+2. Run `npm run refresh:publications`.
+3. Run `npm run build` to verify the generated site.
+4. Commit the updated `src/generated/cv-data.json` and push it with the code.
+
+The Word file is intentionally local-only; the committed generated JSON is
+what GitHub Pages uses during deployment.
+
 The Korean pages are generated from the English `site-content.docx` source.
 Existing reviewed translations in `scripts/cv/create_korean_site_content.py`
 are reused first. New or changed prose is translated automatically through the
