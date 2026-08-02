@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import LinkButton from '../components/LinkButton'
 import PublicationItem from '../components/PublicationItem'
 import { getLocaleFromPath, localizedPath, localeText } from '../content/i18n'
+import { getPageSiteContent } from '../content/pageContent'
 import { journalArticles } from '../content/publications'
 import { profile, researchAreas } from '../content/portfolio'
 import { basePath, site } from '../content/site'
@@ -26,6 +27,8 @@ export default function Home() {
   const router = useRouter()
   const locale = getLocaleFromPath(router.pathname)
   const labels = localeText[locale]
+  const pageContent = getPageSiteContent('home', locale)
+  const homeContent = pageContent.home
   const [emailCopied, setEmailCopied] = useState(false)
   const local = <T extends { readonly en: string; readonly ko: string }>(value: T) => value[locale]
 
@@ -49,7 +52,9 @@ export default function Home() {
                 </h1>
                 <p className="hero__title">{local(profile.role)}</p>
                 <p className="hero__affiliation">{local(profile.affiliation)}</p>
-                <p className="hero__statement">{local(profile.statement)}</p>
+                <p className="hero__statement">
+                  {homeContent?.hero?.length ? homeContent.hero.join(' ') : local(profile.statement)}
+                </p>
                 <div className="hero__links">
                   <LinkButton href={`${basePath}${localizedPath('/research', locale)}`} filled>
                     {locale === 'ko' ? '연구 보기' : 'Explore research'}
@@ -106,7 +111,9 @@ export default function Home() {
         <section className="section" aria-labelledby="about-heading">
           <div className="container container--wide">
             <p className="section__heading" id="about-heading">{labels.about}</p>
-            <p className="about-lead">{local(profile.about)}</p>
+            <p className="about-lead">
+              {homeContent?.about?.length ? homeContent.about.join(' ') : local(profile.about)}
+            </p>
           </div>
         </section>
 

@@ -6,6 +6,7 @@ The document uses ALL-CAPS marker lines to delimit sections:
   HOME ABOUT              paragraphs for the homepage About section
   HOME TEACHING           paragraph(s) for the homepage Teaching preview
   RESEARCH INTRO          paragraphs introducing the research page
+  TEACHING INTRO          paragraphs introducing the teaching page
   PROGRAM: <title>        starts a research program; paragraphs = overview
   KEY QUESTIONS           following lines are questions, one per line
   PUBLICATIONS            following lines are publication titles; each is
@@ -14,6 +15,9 @@ The document uses ALL-CAPS marker lines to delimit sections:
   TEACHING PHILOSOPHY     paragraphs
   COURSE: <title>         course description; <title> must match the course
                           name used in the CV so offerings merge automatically
+  PROJECT: <period>       one teaching/project timeline entry
+  AWARD: <period>         one teaching/award timeline entry
+  TRAINING: <period>      one teaching/training timeline entry
   ACTIVITIES: <course>    starts an activity group for a course
   ITEM: <name>            one classroom activity; paragraphs = description
 
@@ -73,6 +77,7 @@ def marker_of(line: str) -> tuple[str, str] | None:
         "HOME ABOUT": "home_about",
         "HOME TEACHING": "home_teaching",
         "RESEARCH INTRO": "research_intro",
+        "TEACHING INTRO": "teaching_intro",
         "KEY QUESTIONS": "key_questions",
         "PUBLICATIONS": "publications",
         "TEACHING PHILOSOPHY": "teaching_philosophy",
@@ -84,6 +89,9 @@ def marker_of(line: str) -> tuple[str, str] | None:
     for prefix, name in (
         ("PROGRAM:", "program"),
         ("COURSE:", "course"),
+        ("PROJECT:", "project"),
+        ("AWARD:", "award"),
+        ("TRAINING:", "training"),
         ("ACTIVITIES:", "activities"),
         ("ITEM:", "item"),
     ):
@@ -97,16 +105,23 @@ def parse_lines(lines: list[str], source_name: str = "site-content.docx") -> dic
     home_about: list[str] = []
     home_teaching: list[str] = []
     research_intro: list[str] = []
+    teaching_intro: list[str] = []
     programs: list[dict] = []
     philosophy: list[str] = []
     courses: list[dict] = []
     activity_groups: list[dict] = []
+    timelines: dict[str, list[dict]] = {
+        "projects": [],
+        "awards": [],
+        "training": [],
+    }
 
     mode = None  # where plain lines are routed
     current_program: dict | None = None
     current_course: dict | None = None
     current_group: dict | None = None
     current_item: dict | None = None
+    current_timeline: dict | None = None
 
     for line in lines:
         marked = marker_of(line)
@@ -120,6 +135,8 @@ def parse_lines(lines: list[str], source_name: str = "site-content.docx") -> dic
                 mode = "home_teaching"
             elif marker == "research_intro":
                 mode = "research_intro"
+            elif marker == "teaching_intro":
+                mode = "teaching_intro"
             elif marker == "program":
                 current_program = {
                     "title": arg,
@@ -135,6 +152,15 @@ def parse_lines(lines: list[str], source_name: str = "site-content.docx") -> dic
                 mode = "publications"
             elif marker == "teaching_philosophy":
                 mode = "teaching_philosophy"
+            elif marker in ("project", "award", "training"):
+                timeline_key = {
+                    "project": "projects",
+                    "award": "awards",
+                    "training": "training",
+                }[marker]
+                current_timeline = {"date": arg, "text": []}
+                timelines[timeline_key].append(current_timeline)
+                mode = "timeline"
             elif marker == "course":
                 current_course = {"title": arg, "description": []}
                 courses.append(current_course)
@@ -159,6 +185,8 @@ def parse_lines(lines: list[str], source_name: str = "site-content.docx") -> dic
             home_teaching.append(line)
         elif mode == "research_intro":
             research_intro.append(line)
+        elif mode == "teaching_intro":
+            teaching_intro.append(line)
         elif mode == "program_overview" and current_program is not None:
             current_program["overview"].append(line)
         elif mode == "key_questions" and current_program is not None:
@@ -171,6 +199,8 @@ def parse_lines(lines: list[str], source_name: str = "site-content.docx") -> dic
             current_course["description"].append(line)
         elif mode == "item" and current_item is not None:
             current_item["description"].append(line)
+        elif mode == "timeline" and current_timeline is not None:
+            current_timeline["text"].append(line)
         # plain lines in "activities" mode (before first ITEM) are ignored
 
     return {
@@ -185,9 +215,13 @@ def parse_lines(lines: list[str], source_name: str = "site-content.docx") -> dic
         },
         "research": {"intro": research_intro, "programs": programs},
         "teaching": {
+            "intro": teaching_intro,
             "philosophy": philosophy,
             "courses": courses,
             "activities": activity_groups,
+            "projects": timelines["projects"],
+            "awards": timelines["awards"],
+            "training": timelines["training"],
         },
     }
 

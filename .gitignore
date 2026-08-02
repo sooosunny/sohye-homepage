@@ -17,6 +17,7 @@ out/
 *.log
 npm-debug.log*
 *.tsbuildinfo
+__pycache__/
 
 # Local drafts and source documents
 private/
@@ -31,3 +32,6 @@ drafts/
 /files/links.rtf
 /files/profile photo.jpg
 /public/headshot.jpg
+
+# Page-scoped Word sources stay local; generated JSON is committed.
+/word/*.docx

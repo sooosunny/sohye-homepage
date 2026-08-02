@@ -1,4 +1,5 @@
 import { profile } from './portfolio'
+import { getPageCvContent, type PageCvPublication } from './pageContent'
 import {
   generatedPublished,
   generatedWorkInProgress,
@@ -64,7 +65,7 @@ const publicationStatuses = new Set<PublicationStatus>([
   'In Progress',
 ])
 
-function toPublication(raw: CvPublication): Publication {
+export function toPublication(raw: CvPublication | PageCvPublication): Publication {
   const status = publicationStatuses.has(raw.status as PublicationStatus)
     ? raw.status as PublicationStatus
     : 'Published'
@@ -90,18 +91,24 @@ function belongsToCurrentProfile(items: readonly CvPublication[]): boolean {
   )
 }
 
-// The generated JSON is the Word-derived source of truth once it belongs to
-// this profile. The fallback protects the site from an old generated snapshot
-// left over from a different profile until `npm run generate:cv` is run.
-const generatedPublications = [...generatedPublished, ...generatedWorkInProgress]
+const pagePublicationData = getPageCvContent('publications', 'en')
+const pagePublished = pagePublicationData.publications?.published ?? []
+const pageWorkInProgress = pagePublicationData.publications?.work_in_progress ?? []
+const hasPagePublicationData = pagePublished.length + pageWorkInProgress.length > 0
+
+// The page-scoped Word document takes precedence when it exists. The legacy
+// generated CV remains a compatibility fallback for existing local workflows.
+const generatedPublications = hasPagePublicationData
+  ? [...pagePublished, ...pageWorkInProgress]
+  : [...generatedPublished, ...generatedWorkInProgress]
 const useGeneratedPublications = belongsToCurrentProfile(generatedPublications)
 
 export const journalArticles: readonly Publication[] = useGeneratedPublications
-  ? generatedPublished.filter((item) => item.title.trim()).map(toPublication)
+  ? (hasPagePublicationData ? pagePublished : generatedPublished).filter((item) => item.title.trim()).map(toPublication)
   : fallbackJournalArticles
 
 export const worksInProgress: readonly Publication[] = useGeneratedPublications
-  ? generatedWorkInProgress.filter((item) => item.title.trim()).map(toPublication)
+  ? (hasPagePublicationData ? pageWorkInProgress : generatedWorkInProgress).filter((item) => item.title.trim()).map(toPublication)
   : fallbackWorksInProgress
 
 export const bookChapters: readonly Publication[] = []

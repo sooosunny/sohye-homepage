@@ -16,8 +16,38 @@ A GitHub Actions workflow in `.github/workflows/deploy.yml` builds and deploys t
 
 ## Routine Content Updates
 
-The public repository contains only the generated website content and public
-PDF. The two Word source documents remain local and are intentionally ignored.
+Each top-level page has its own optional Word source under `word/`. This is
+the recommended workflow for page-level editing:
+
+| Page | English source | Optional Korean source | Parser |
+|---|---|---|---|
+| Home | `word/home.docx` | `word/home-ko.docx` | Site markers |
+| Research | `word/research.docx` | `word/research-ko.docx` | Site markers |
+| Teaching | `word/teaching.docx` | `word/teaching-ko.docx` | Site markers |
+| Publications | `word/publications.docx` | `word/publications-ko.docx` | CV markers |
+| CV | `word/cv.docx` | `word/cv-ko.docx` | CV markers |
+
+The Word files are local-only and are not pushed to GitHub. The parser writes
+the public build inputs to `src/generated/pages/*.json`, and those generated
+JSON files are committed. A missing page document is safe: that page keeps its
+existing built-in content.
+
+To refresh every page, run:
+
+```bash
+npm run refresh:pages
+npm run build
+```
+
+To refresh only one page, use one of `npm run refresh:page:home`,
+`npm run refresh:page:research`, `npm run refresh:page:teaching`,
+`npm run refresh:page:publications`, or `npm run refresh:page:cv`.
+
+The exact marker templates and examples are in [`word/README.md`](word/README.md).
+
+The older repository-root Word workflow remains available for compatibility.
+The public repository contains only generated website content and public PDF;
+the Word source documents remain local and intentionally ignored.
 When they are available at the repository root, refresh the generated output
 before committing a content update:
 
@@ -81,8 +111,9 @@ preview sections.
 
 | What to update | File |
 |---|---|
-| Update master CV (local only) | `public/cv.docx` |
-| Update research narratives / teaching text (local only) | `site-content.docx` |
+| Update one page (local only) | `word/<page>.docx` |
+| Update master CV (legacy local workflow) | `public/cv.docx` |
+| Update research narratives / teaching text (legacy local workflow) | `site-content.docx` |
 | Regenerate Korean site narratives / teaching text | `npm run generate:content:ko` |
 | Refresh public generated data | `npm run refresh:content` |
 | Update links (Scholar, ORCID) | `src/content/site.ts` |
