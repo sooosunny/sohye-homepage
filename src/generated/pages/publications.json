@@ -1,9 +1,389 @@
 {
   "meta": {
     "page": "publications",
-    "source": "word/publications.docx",
-    "generated_at": "2026-08-02T03:35:08.600436+00:00"
+    "source": "publications.docx",
+    "generated_at": "2026-08-02T07:38:57.789172+00:00"
   },
-  "en": {},
-  "ko": {}
+  "en": {
+    "meta": {
+      "source": "publications.docx",
+      "generated_at": "2026-08-02T07:38:57.789830+00:00"
+    },
+    "contact": {},
+    "employment": [],
+    "education": [],
+    "research_areas": [],
+    "publications": {
+      "published": [
+        {
+          "year": "2026",
+          "status": "Published",
+          "authors": "Bae, S., Song, H. G., & Sunny, H. W",
+          "title": "From viewing to buying: How viewer attitudes and para-social bonds drive short food content purchase intentions",
+          "venue": "Culinary Science & Hospitality Research",
+          "volume_issue_pages": "32(2)"
+        },
+        {
+          "year": "2025",
+          "status": "Published",
+          "authors": "Bae, S., & Park, G. G",
+          "title": "The Effects of Consumers’ Perceptions of ESG Management in Foodservice Franchises on Reuse Intention: An Ordered Probit Analysis",
+          "venue": "Culinary Science & Hospitality Research",
+          "volume_issue_pages": "31(12), 243–254"
+        },
+        {
+          "year": "2025",
+          "status": "Published",
+          "authors": "Bae, S., & Park, G",
+          "title": "An Ordered Probit Analysis of the Factors Influencing Relationships among Cultural Heritage Tourism Motivation, Constraints, and Attitudes",
+          "venue": "FoodService Industry Journal",
+          "volume_issue_pages": "21(6), 431–454"
+        },
+        {
+          "year": "2025",
+          "status": "Published",
+          "authors": "Bae, S., & Kim, I",
+          "title": "Comparative Analysis of Foreign Consumers’ Perceptions of K-Food Emotions: Focusing on Reddit Cases",
+          "venue": "The Journal of Internet Electronic Commerce Research",
+          "volume_issue_pages": "25(5), 121–131"
+        },
+        {
+          "year": "2025",
+          "status": "Published",
+          "authors": "Lee, S., Bae, S., & Kim, I",
+          "title": "Exploring formation process of willingness to accept online personalised advertising for travel products",
+          "venue": "The e-Business Studies",
+          "volume_issue_pages": "26(2), 109–125"
+        },
+        {
+          "year": "2025",
+          "status": "Published",
+          "authors": "Nam, J. H., Bae, S., & Kwon, E. K",
+          "title": "The impact of senior tourists’ package tour experiences on travel satisfaction, trust, and intention to pay premium",
+          "venue": "Journal of Tourism Enhancement",
+          "volume_issue_pages": "129–148"
+        },
+        {
+          "year": "2025",
+          "status": "Published",
+          "authors": "Yoon, H., Bae, S., & Park, E",
+          "title": "Effects of Experiential Economic Factors on Emotional Attachment and Pro-Environmental Behaviour Among Nature-based Walking Tourists",
+          "venue": "Journal of Tourism Enhancement",
+          "volume_issue_pages": "13(1), 91–111"
+        },
+        {
+          "year": "2024",
+          "status": "Published",
+          "authors": "Bae, S., & Kim, I",
+          "title": "Social Perception and Activation Strategies of Templestay: A Big Data Analysis",
+          "venue": "FoodService Industry Journal",
+          "volume_issue_pages": "20(6), 275–288"
+        },
+        {
+          "year": "2024",
+          "status": "Published",
+          "authors": "Kim, I., & Bae, S",
+          "title": "The Effects of Motivation for Open-Kitchen Restaurants Adopting Robot Chefs on Consumer Attitude, Intentions to Use, and Word-of-Mouth",
+          "venue": "FoodService Industry Journal",
+          "volume_issue_pages": "20(6), 383–397"
+        },
+        {
+          "year": "2024",
+          "status": "Published",
+          "authors": "Park, E., Bae, S., & Kim, I",
+          "title": "Exploring motivations influencing customers’ attitudes toward using reusable cups in eco-friendly coffee shops",
+          "venue": "Journal of Tourism Enhancement",
+          "volume_issue_pages": "167–184"
+        },
+        {
+          "year": "2024",
+          "status": "Published",
+          "authors": "Kim, Y., Bae, S., & Kim, I",
+          "title": "Effects of Robotic Chefs’ Food Quality Prediction and Personal Innovativeness on Consumer Attitudes and Intention to Visit",
+          "venue": "Journal of Tourism Enhancement",
+          "volume_issue_pages": "12(3), 27–42"
+        },
+        {
+          "year": "2024",
+          "status": "Published",
+          "authors": "Bae, S., Kim, J., Kim, D., & Kim, I",
+          "title": "Investigating benefits of operating shared kitchens for virtual restaurants: Small-business owner perspectives",
+          "venue": "Journal of Hospitality and Tourism Studies",
+          "volume_issue_pages": "26(4), 193–204"
+        },
+        {
+          "year": "2024",
+          "status": "Published",
+          "authors": "Kang, S., Han, S. H., Bae, S. H., & Yoon, Y. H",
+          "title": "The effect of serving robots on attitude and behavioural intention of restaurant customers",
+          "venue": "Korean Journal of Franchise Management",
+          "volume_issue_pages": "15(2), 57–75"
+        },
+        {
+          "year": "2024",
+          "status": "Published",
+          "authors": "Bae, S., & Kim, I",
+          "title": "Investigating barriers hindering attitude formation towards reusable cup usage in the coffee shop industry",
+          "venue": "FoodService Industry Journal",
+          "volume_issue_pages": "20(3), 119–131"
+        },
+        {
+          "year": "2024",
+          "status": "Published",
+          "authors": "Bae, S., & Kim, I",
+          "title": "Exploring the structure of motivations, benefits and values of walking travel experience sharing on social media",
+          "venue": "Journal of Hospitality and Tourism Studies",
+          "volume_issue_pages": "26(2), 65–79"
+        },
+        {
+          "year": "2023",
+          "status": "Published",
+          "authors": "Bae, S., Park, H., Kang, S., & Han, S",
+          "title": "How Usage Motivation Regarding Serving Robots Affect Customer Attitudes and Intent to Revisit Restaurants",
+          "venue": "FoodService Industry Journal",
+          "volume_issue_pages": "19(6), 281–295"
+        },
+        {
+          "year": "2022",
+          "status": "Published",
+          "authors": "Bae, S., & Kim, I",
+          "title": "Importance-satisfaction Analysis for Campsite Selection Attributes after the COVID-19 Outbreak",
+          "venue": "Korean Journal of Hospitality & Tourism",
+          "volume_issue_pages": "31(4), 127–145"
+        }
+      ],
+      "work_in_progress": [
+        {
+          "status": "In Progress",
+          "authors": "Bae, S., Lee, H., Soeiro, J. D., Shin, H., Metzger, P., & Kim, M. J",
+          "title": "Immersive Recovery Through Space Tourism: An Experimental Study on Psychological and Physiological Responses",
+          "venue": "Tourism Management"
+        },
+        {
+          "status": "In Progress",
+          "authors": "Lee, H., Bae, S., Soeiro, J. D., Shin, H., Metzger, P., & Kim, M. J",
+          "title": "Does Microgravity-like VR Recalibrate Risk? Evidence from Underwater vs. Ground VR for Space Tourism",
+          "venue": "Annals of Tourism Research"
+        },
+        {
+          "status": "In Progress",
+          "authors": "Park, G., Bae, S., Lee, H., Soeiro, J. D., Metzger, P., & Kim, M. J",
+          "title": "Estimating Consumer Preferences for Space Tourism Experiences",
+          "venue": "Journal of Travel Research"
+        },
+        {
+          "status": "In Progress",
+          "authors": "Bae, S., Choi, H., Kim, N., Petrick, J. F., & Kim, M. J",
+          "title": "Space Flight Experience Interview",
+          "venue": "Annals of Tourism Research"
+        },
+        {
+          "status": "In Progress",
+          "authors": "Bae, S., Lim, W. M., Lee, H., Hong, M., & Kim, M. J",
+          "title": "Space tourism bibliometric analysis: Sustainability, ethics & corporate social responsibility",
+          "venue": "Annals of Tourism Research"
+        }
+      ]
+    },
+    "invited_talks": [],
+    "selected_conference_presentations": [],
+    "honors_and_grants": [],
+    "teaching": {
+      "institutions": [],
+      "workshops": []
+    },
+    "review_and_editorial_service": [],
+    "other_professional_service": []
+  },
+  "ko": {
+    "meta": {
+      "source": "publications-ko.docx",
+      "generated_at": "2026-08-02T07:38:57.791221+00:00"
+    },
+    "contact": {},
+    "employment": [],
+    "education": [],
+    "research_areas": [],
+    "publications": {
+      "published": [
+        {
+          "year": "2026",
+          "status": "Published",
+          "authors": "Bae, S., Song, H. G., & Sunny, H. W",
+          "title": "From viewing to buying: How viewer attitudes and para-social bonds drive short food content purchase intentions",
+          "venue": "Culinary Science & Hospitality Research",
+          "volume_issue_pages": "32(2)"
+        },
+        {
+          "year": "2025",
+          "status": "Published",
+          "authors": "Bae, S., & Park, G. G",
+          "title": "The Effects of Consumers’ Perceptions of ESG Management in Foodservice Franchises on Reuse Intention: An Ordered Probit Analysis",
+          "venue": "Culinary Science & Hospitality Research",
+          "volume_issue_pages": "31(12), 243–254"
+        },
+        {
+          "year": "2025",
+          "status": "Published",
+          "authors": "Bae, S., & Park, G",
+          "title": "An Ordered Probit Analysis of the Factors Influencing Relationships among Cultural Heritage Tourism Motivation, Constraints, and Attitudes",
+          "venue": "FoodService Industry Journal",
+          "volume_issue_pages": "21(6), 431–454"
+        },
+        {
+          "year": "2025",
+          "status": "Published",
+          "authors": "Bae, S., & Kim, I",
+          "title": "Comparative Analysis of Foreign Consumers’ Perceptions of K-Food Emotions: Focusing on Reddit Cases",
+          "venue": "The Journal of Internet Electronic Commerce Research",
+          "volume_issue_pages": "25(5), 121–131"
+        },
+        {
+          "year": "2025",
+          "status": "Published",
+          "authors": "Lee, S., Bae, S., & Kim, I",
+          "title": "Exploring formation process of willingness to accept online personalised advertising for travel products",
+          "venue": "The e-Business Studies",
+          "volume_issue_pages": "26(2), 109–125"
+        },
+        {
+          "year": "2025",
+          "status": "Published",
+          "authors": "Nam, J. H., Bae, S., & Kwon, E. K",
+          "title": "The impact of senior tourists’ package tour experiences on travel satisfaction, trust, and intention to pay premium",
+          "venue": "Journal of Tourism Enhancement",
+          "volume_issue_pages": "129–148"
+        },
+        {
+          "year": "2025",
+          "status": "Published",
+          "authors": "Yoon, H., Bae, S., & Park, E",
+          "title": "Effects of Experiential Economic Factors on Emotional Attachment and Pro-Environmental Behaviour Among Nature-based Walking Tourists",
+          "venue": "Journal of Tourism Enhancement",
+          "volume_issue_pages": "13(1), 91–111"
+        },
+        {
+          "year": "2024",
+          "status": "Published",
+          "authors": "Bae, S., & Kim, I",
+          "title": "Social Perception and Activation Strategies of Templestay: A Big Data Analysis",
+          "venue": "FoodService Industry Journal",
+          "volume_issue_pages": "20(6), 275–288"
+        },
+        {
+          "year": "2024",
+          "status": "Published",
+          "authors": "Kim, I., & Bae, S",
+          "title": "The Effects of Motivation for Open-Kitchen Restaurants Adopting Robot Chefs on Consumer Attitude, Intentions to Use, and Word-of-Mouth",
+          "venue": "FoodService Industry Journal",
+          "volume_issue_pages": "20(6), 383–397"
+        },
+        {
+          "year": "2024",
+          "status": "Published",
+          "authors": "Park, E., Bae, S., & Kim, I",
+          "title": "Exploring motivations influencing customers’ attitudes toward using reusable cups in eco-friendly coffee shops",
+          "venue": "Journal of Tourism Enhancement",
+          "volume_issue_pages": "167–184"
+        },
+        {
+          "year": "2024",
+          "status": "Published",
+          "authors": "Kim, Y., Bae, S., & Kim, I",
+          "title": "Effects of Robotic Chefs’ Food Quality Prediction and Personal Innovativeness on Consumer Attitudes and Intention to Visit",
+          "venue": "Journal of Tourism Enhancement",
+          "volume_issue_pages": "12(3), 27–42"
+        },
+        {
+          "year": "2024",
+          "status": "Published",
+          "authors": "Bae, S., Kim, J., Kim, D., & Kim, I",
+          "title": "Investigating benefits of operating shared kitchens for virtual restaurants: Small-business owner perspectives",
+          "venue": "Journal of Hospitality and Tourism Studies",
+          "volume_issue_pages": "26(4), 193–204"
+        },
+        {
+          "year": "2024",
+          "status": "Published",
+          "authors": "Kang, S., Han, S. H., Bae, S. H., & Yoon, Y. H",
+          "title": "The effect of serving robots on attitude and behavioural intention of restaurant customers",
+          "venue": "Korean Journal of Franchise Management",
+          "volume_issue_pages": "15(2), 57–75"
+        },
+        {
+          "year": "2024",
+          "status": "Published",
+          "authors": "Bae, S., & Kim, I",
+          "title": "Investigating barriers hindering attitude formation towards reusable cup usage in the coffee shop industry",
+          "venue": "FoodService Industry Journal",
+          "volume_issue_pages": "20(3), 119–131"
+        },
+        {
+          "year": "2024",
+          "status": "Published",
+          "authors": "Bae, S., & Kim, I",
+          "title": "Exploring the structure of motivations, benefits and values of walking travel experience sharing on social media",
+          "venue": "Journal of Hospitality and Tourism Studies",
+          "volume_issue_pages": "26(2), 65–79"
+        },
+        {
+          "year": "2023",
+          "status": "Published",
+          "authors": "Bae, S., Park, H., Kang, S., & Han, S",
+          "title": "How Usage Motivation Regarding Serving Robots Affect Customer Attitudes and Intent to Revisit Restaurants",
+          "venue": "FoodService Industry Journal",
+          "volume_issue_pages": "19(6), 281–295"
+        },
+        {
+          "year": "2022",
+          "status": "Published",
+          "authors": "Bae, S., & Kim, I",
+          "title": "Importance-satisfaction Analysis for Campsite Selection Attributes after the COVID-19 Outbreak",
+          "venue": "Korean Journal of Hospitality & Tourism",
+          "volume_issue_pages": "31(4), 127–145"
+        }
+      ],
+      "work_in_progress": [
+        {
+          "status": "In Progress",
+          "authors": "Bae, S., Lee, H., Soeiro, J. D., Shin, H., Metzger, P., & Kim, M. J",
+          "title": "Immersive Recovery Through Space Tourism: An Experimental Study on Psychological and Physiological Responses",
+          "venue": "Tourism Management"
+        },
+        {
+          "status": "In Progress",
+          "authors": "Lee, H., Bae, S., Soeiro, J. D., Shin, H., Metzger, P., & Kim, M. J",
+          "title": "Does Microgravity-like VR Recalibrate Risk? Evidence from Underwater vs. Ground VR for Space Tourism",
+          "venue": "Annals of Tourism Research"
+        },
+        {
+          "status": "In Progress",
+          "authors": "Park, G., Bae, S., Lee, H., Soeiro, J. D., Metzger, P., & Kim, M. J",
+          "title": "Estimating Consumer Preferences for Space Tourism Experiences",
+          "venue": "Journal of Travel Research"
+        },
+        {
+          "status": "In Progress",
+          "authors": "Bae, S., Choi, H., Kim, N., Petrick, J. F., & Kim, M. J",
+          "title": "Space Flight Experience Interview",
+          "venue": "Annals of Tourism Research"
+        },
+        {
+          "status": "In Progress",
+          "authors": "Bae, S., Lim, W. M., Lee, H., Hong, M., & Kim, M. J",
+          "title": "Space tourism bibliometric analysis: Sustainability, ethics & corporate social responsibility",
+          "venue": "Annals of Tourism Research"
+        }
+      ]
+    },
+    "invited_talks": [],
+    "selected_conference_presentations": [],
+    "honors_and_grants": [],
+    "teaching": {
+      "institutions": [],
+      "workshops": []
+    },
+    "review_and_editorial_service": [],
+    "other_professional_service": []
+  }
 }

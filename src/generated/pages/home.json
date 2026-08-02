@@ -1,9 +1,327 @@
 {
   "meta": {
     "page": "home",
-    "source": "word/home.docx",
-    "generated_at": "2026-08-02T03:35:08.599946+00:00"
+    "source": "home.docx",
+    "generated_at": "2026-08-02T07:38:57.785993+00:00"
   },
-  "en": {},
-  "ko": {}
+  "en": {
+    "meta": {
+      "source": "home.docx",
+      "generated_at": "2026-08-02T07:38:57.787227+00:00"
+    },
+    "home": {
+      "hero": [
+        "I study how technology, sustainability, and emerging experiences reshape tourism and hospitality."
+      ],
+      "about": [
+        "Sohye Bae is a tourism researcher working across hospitality, consumer behavior, sustainable tourism, and emerging technologies. Her research connects real-world industry questions with quantitative analysis, big-data methods, and experimental approaches."
+      ],
+      "teaching_snapshot": []
+    },
+    "research": {
+      "intro": [
+        "My work examines tourism and hospitality through four connected lenses: technology, sustainability, culture, and future experiences."
+      ],
+      "programs": [
+        {
+          "title": "Technology & Hospitality",
+          "overview": [
+            "How service robots, robot chefs, virtual environments, and personalized media shape attitudes, trust, and behavioral intentions."
+          ],
+          "key_questions": [
+            "Service robots",
+            "Robot chefs",
+            "VR experiments",
+            "Personalized advertising"
+          ],
+          "publications": []
+        },
+        {
+          "title": "Sustainability & ESG",
+          "overview": [
+            "Consumer participation in reusable systems, pro-environmental behavior, ESG management, and responsible tourism."
+          ],
+          "key_questions": [
+            "Reusable cups",
+            "ESG management",
+            "Pro-environmental identity",
+            "Food-waste reduction"
+          ],
+          "publications": []
+        },
+        {
+          "title": "Culture, Media & Place",
+          "overview": [
+            "Digital discourse, cultural heritage, food culture, walking tourism, and new forms of destination experience."
+          ],
+          "key_questions": [
+            "K-food",
+            "K-pop discourse",
+            "Cultural heritage",
+            "Walking tourism"
+          ],
+          "publications": []
+        },
+        {
+          "title": "Space Tourism Futures",
+          "overview": [
+            "Psychological recovery, risk perception, willingness to pay, sustainability, regulation, and the emerging space-tourism ecosystem."
+          ],
+          "key_questions": [
+            "Immersive recovery",
+            "Risk perception",
+            "Space tourist experience",
+            "Policy & ethics"
+          ],
+          "publications": []
+        }
+      ]
+    },
+    "teaching": {
+      "intro": [
+        "Public tourism projects, academic recognition, and professional training connect my research with practice."
+      ],
+      "philosophy": [],
+      "courses": [],
+      "activities": [],
+      "projects": [
+        {
+          "date": "2025",
+          "text": [
+            "Development of the Haeundae Core Cultural Tourism Belt, Haeundae District Office, Busan."
+          ]
+        },
+        {
+          "date": "2025",
+          "text": [
+            "Establishment of the Banyeo–Bansong Development Master Plan, Haeundae District Office, Busan."
+          ]
+        },
+        {
+          "date": "2019",
+          "text": [
+            "Evaluation and Revitalisation Strategies for Tourism Development Projects, Ministry of Culture, Sports and Tourism."
+          ]
+        }
+      ],
+      "awards": [
+        {
+          "date": "2026.02.24",
+          "text": [
+            "Presidential Commendation, Jeju · AWS Global Space Challenge Hackathon."
+          ]
+        },
+        {
+          "date": "2025.11.20",
+          "text": [
+            "Youth Volunteer Corps Award, Busan Economic Promotion Agency."
+          ]
+        },
+        {
+          "date": "2025.01.23",
+          "text": [
+            "PNU-Star Award, Pusan National University."
+          ]
+        },
+        {
+          "date": "2025.01.15",
+          "text": [
+            "Best Paper Award, 97th TOSOK International Tourism Conference."
+          ]
+        },
+        {
+          "date": "2024.12.17",
+          "text": [
+            "Excellent Paper Award, 40th Korean Foodservice Industry Association Conference."
+          ]
+        },
+        {
+          "date": "2024.12.04",
+          "text": [
+            "Encouragement Prize, 7th Refuge Capital Busan Academic Paper Competition."
+          ]
+        },
+        {
+          "date": "2022.06.25",
+          "text": [
+            "Excellent Paper Award, 35th Korean Foodservice Industry Association Conference."
+          ]
+        }
+      ],
+      "training": [
+        {
+          "date": "2025–2026",
+          "text": [
+            "Jeju RISE · AWS Global Space Bootcamp, Amazon Web Services Korea."
+          ]
+        },
+        {
+          "date": "2022",
+          "text": [
+            "Practical AI Project Programme."
+          ]
+        }
+      ]
+    }
+  },
+  "ko": {
+    "meta": {
+      "source": "home-ko.docx",
+      "generated_at": "2026-08-02T07:38:57.787737+00:00"
+    },
+    "home": {
+      "hero": [
+        "기술, 지속가능성, 새로운 경험이 관광과 호스피탈리티를 어떻게 변화시키는지 연구합니다."
+      ],
+      "about": [
+        "배소혜는 호스피탈리티, 소비자 행동, 지속가능한 관광, 신기술을 아우르는 관광 연구자입니다. 산업 현장의 문제를 정량 분석, 빅데이터, 실험 연구와 연결합니다."
+      ],
+      "teaching_snapshot": []
+    },
+    "research": {
+      "intro": [
+        "관광과 호스피탈리티의 변화를 기술, 지속가능성, 문화, 미래 경험이라는 네 축에서 탐구합니다."
+      ],
+      "programs": [
+        {
+          "title": "기술과 호스피탈리티",
+          "overview": [
+            "서빙로봇, 로봇 셰프, 가상환경, 개인화 미디어가 태도와 신뢰, 행동의도에 미치는 영향을 연구합니다."
+          ],
+          "key_questions": [
+            "서빙로봇",
+            "로봇 셰프",
+            "VR 실험",
+            "개인화 광고"
+          ],
+          "publications": []
+        },
+        {
+          "title": "지속가능성과 ESG",
+          "overview": [
+            "다회용 시스템 참여, 친환경 행동, ESG 경영, 책임 있는 관광을 소비자 관점에서 탐구합니다."
+          ],
+          "key_questions": [
+            "다회용 컵",
+            "ESG 경영",
+            "친환경 정체성",
+            "음식물 쓰레기 감축"
+          ],
+          "publications": []
+        },
+        {
+          "title": "문화·미디어·장소",
+          "overview": [
+            "디지털 담론, 문화유산, 음식문화, 걷기여행, 새로운 목적지 경험을 분석합니다."
+          ],
+          "key_questions": [
+            "K-푸드",
+            "K-pop 담론",
+            "문화유산",
+            "걷기여행"
+          ],
+          "publications": []
+        },
+        {
+          "title": "우주관광의 미래",
+          "overview": [
+            "심리적 회복, 위험 인식, 지불의사, 지속가능성, 규제, 우주관광 생태계를 연구합니다."
+          ],
+          "key_questions": [
+            "몰입형 회복",
+            "위험 인식",
+            "우주관광객 경험",
+            "정책과 윤리"
+          ],
+          "publications": []
+        }
+      ]
+    },
+    "teaching": {
+      "intro": [
+        "공공 관광 프로젝트, 학술 수상, 전문 교육을 통해 연구를 현장과 연결합니다."
+      ],
+      "philosophy": [],
+      "courses": [],
+      "activities": [],
+      "projects": [
+        {
+          "date": "2025",
+          "text": [
+            "해운대 핵심 문화관광벨트 조성 용역, 부산광역시 해운대구청."
+          ]
+        },
+        {
+          "date": "2025",
+          "text": [
+            "반여·반송 발전 마스터플랜 수립 용역, 부산광역시 해운대구청."
+          ]
+        },
+        {
+          "date": "2019",
+          "text": [
+            "관광지 등 조성사업 평가 및 활성화 방안 총괄보고서, 문화체육관광부."
+          ]
+        }
+      ],
+      "awards": [
+        {
+          "date": "2026.02.24",
+          "text": [
+            "제주·AWS 글로벌 스페이스 챌린지 해커톤 제주한라대학교 총장 표창."
+          ]
+        },
+        {
+          "date": "2025.11.20",
+          "text": [
+            "청년봉사단 부산경제진흥원 원장 표창."
+          ]
+        },
+        {
+          "date": "2025.01.23",
+          "text": [
+            "2024학년도 PNU-Star 부산대학교 총장 표창."
+          ]
+        },
+        {
+          "date": "2025.01.15",
+          "text": [
+            "제97차 한국관광학회 국제학술대회 우수논문상."
+          ]
+        },
+        {
+          "date": "2024.12.17",
+          "text": [
+            "제40차 한국외식산업학회 우수논문상."
+          ]
+        },
+        {
+          "date": "2024.12.04",
+          "text": [
+            "제7회 피란수도 부산 논문공모전 전문연구자 분야 장려상."
+          ]
+        },
+        {
+          "date": "2022.06.25",
+          "text": [
+            "제35차 한국외식산업학회 우수논문상."
+          ]
+        }
+      ],
+      "training": [
+        {
+          "date": "2025–2026",
+          "text": [
+            "제주 RISE·AWS 글로벌 스페이스 부트캠프, 아마존웹서비스 코리아."
+          ]
+        },
+        {
+          "date": "2022",
+          "text": [
+            "실전형 인공지능 프로젝트 과정."
+          ]
+        }
+      ]
+    }
+  }
 }

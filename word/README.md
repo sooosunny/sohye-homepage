@@ -2,7 +2,8 @@
 
 Create or edit one Word document per page. Keep the marker lines exactly as
 written; the text below each marker becomes the corresponding page content.
-These source documents are private local inputs and are ignored by Git.
+These source documents are versioned alongside the site so the editable source
+travels with the project.
 
 ## Site pages
 
@@ -88,6 +89,6 @@ git commit -m "Update research page content"
 git push origin main
 ```
 
-Repeat with the relevant page command and generated JSON file. Never commit
-the `.docx` source files; the generated JSON is the deployable source used by
-GitHub Pages.
+Repeat with the relevant page command and generated JSON file. Commit both the
+edited `.docx` source and its generated JSON; the generated JSON is the
+deployable source used by GitHub Pages.

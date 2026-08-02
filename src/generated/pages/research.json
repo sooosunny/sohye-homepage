@@ -1,9 +1,171 @@
 {
   "meta": {
     "page": "research",
-    "source": "word/research.docx",
-    "generated_at": "2026-08-02T03:35:08.600228+00:00"
+    "source": "research.docx",
+    "generated_at": "2026-08-02T07:38:57.788233+00:00"
   },
-  "en": {},
-  "ko": {}
+  "en": {
+    "meta": {
+      "source": "research.docx",
+      "generated_at": "2026-08-02T07:38:57.788547+00:00"
+    },
+    "home": {
+      "hero": [],
+      "about": [
+        "Sohye Bae is a tourism researcher working across hospitality, consumer behavior, sustainable tourism, and emerging technologies. Her research connects real-world industry questions with quantitative analysis, big-data methods, and experimental approaches."
+      ],
+      "teaching_snapshot": []
+    },
+    "research": {
+      "intro": [
+        "My work examines tourism and hospitality through four connected lenses: technology, sustainability, culture, and future experiences."
+      ],
+      "programs": [
+        {
+          "title": "Technology & Hospitality",
+          "overview": [
+            "How service robots, robot chefs, virtual environments, and personalized media shape attitudes, trust, and behavioral intentions."
+          ],
+          "key_questions": [
+            "Service robots",
+            "Robot chefs",
+            "VR experiments",
+            "Personalized advertising"
+          ],
+          "publications": []
+        },
+        {
+          "title": "Sustainability & ESG",
+          "overview": [
+            "Consumer participation in reusable systems, pro-environmental behavior, ESG management, and responsible tourism."
+          ],
+          "key_questions": [
+            "Reusable cups",
+            "ESG management",
+            "Pro-environmental identity",
+            "Food-waste reduction"
+          ],
+          "publications": []
+        },
+        {
+          "title": "Culture, Media & Place",
+          "overview": [
+            "Digital discourse, cultural heritage, food culture, walking tourism, and new forms of destination experience."
+          ],
+          "key_questions": [
+            "K-food",
+            "K-pop discourse",
+            "Cultural heritage",
+            "Walking tourism"
+          ],
+          "publications": []
+        },
+        {
+          "title": "Space Tourism Futures",
+          "overview": [
+            "Psychological recovery, risk perception, willingness to pay, sustainability, regulation, and the emerging space-tourism ecosystem."
+          ],
+          "key_questions": [
+            "Immersive recovery",
+            "Risk perception",
+            "Space tourist experience",
+            "Policy & ethics"
+          ],
+          "publications": []
+        }
+      ]
+    },
+    "teaching": {
+      "intro": [
+        "Public tourism projects, academic recognition, and professional training connect my research with practice."
+      ],
+      "philosophy": [],
+      "courses": [],
+      "activities": [],
+      "projects": [],
+      "awards": [],
+      "training": []
+    }
+  },
+  "ko": {
+    "meta": {
+      "source": "research-ko.docx",
+      "generated_at": "2026-08-02T07:38:57.788837+00:00"
+    },
+    "home": {
+      "hero": [],
+      "about": [],
+      "teaching_snapshot": []
+    },
+    "research": {
+      "intro": [
+        "관광과 호스피탈리티의 변화를 기술, 지속가능성, 문화, 미래 경험이라는 네 축에서 탐구합니다."
+      ],
+      "programs": [
+        {
+          "title": "기술과 호스피탈리티",
+          "overview": [
+            "서빙로봇, 로봇 셰프, 가상환경, 개인화 미디어가 태도와 신뢰, 행동의도에 미치는 영향을 연구합니다."
+          ],
+          "key_questions": [
+            "서빙로봇",
+            "로봇 셰프",
+            "VR 실험",
+            "개인화 광고"
+          ],
+          "publications": []
+        },
+        {
+          "title": "지속가능성과 ESG",
+          "overview": [
+            "다회용 시스템 참여, 친환경 행동, ESG 경영, 책임 있는 관광을 소비자 관점에서 탐구합니다."
+          ],
+          "key_questions": [
+            "다회용 컵",
+            "ESG 경영",
+            "친환경 정체성",
+            "음식물 쓰레기 감축"
+          ],
+          "publications": []
+        },
+        {
+          "title": "문화·미디어·장소",
+          "overview": [
+            "디지털 담론, 문화유산, 음식문화, 걷기여행, 새로운 목적지 경험을 분석합니다."
+          ],
+          "key_questions": [
+            "K-푸드",
+            "K-pop 담론",
+            "문화유산",
+            "걷기여행"
+          ],
+          "publications": []
+        },
+        {
+          "title": "우주관광의 미래",
+          "overview": [
+            "심리적 회복, 위험 인식, 지불의사, 지속가능성, 규제, 우주관광 생태계를 연구합니다."
+          ],
+          "key_questions": [
+            "몰입형 회복",
+            "위험 인식",
+            "우주관광객 경험",
+            "정책과 윤리"
+          ],
+          "publications": []
+        }
+      ]
+    },
+    "teaching": {
+      "intro": [
+        "공공 관광 프로젝트, 학술 수상, 전문 교육을 통해 연구를 현장과 연결합니다."
+      ],
+      "philosophy": [],
+      "courses": [],
+      "activities": [],
+      "projects": [],
+      "awards": [],
+      "training": []
+    }
+  }
 }

@@ -27,7 +27,7 @@ TOP_LEVEL_HEADINGS = {
 }
 
 YEAR_LINE_RE = re.compile(
-    r"^(?P<period>\d{4}(?:\s*[\-–]\s*(?:\d{4}|Current))?(?:\s+(?:Fall|Spring|Summer|Winter))?)\s+(?P<text>.+)$"
+    r"^(?P<period>\d{4}(?:[.-]\d{2}(?:[.-]\d{2})?)?(?:\s*[\-–]\s*(?:\d{4}|Current))?(?:\s+(?:Fall|Spring|Summer|Winter))?)\s+(?P<text>.+)$"
 )
 
 DOI_URL_RE = re.compile(r"https?://doi\.org/\S+", flags=re.IGNORECASE)

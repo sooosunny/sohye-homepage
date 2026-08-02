@@ -32,6 +32,3 @@ drafts/
 /files/links.rtf
 /files/profile photo.jpg
 /public/headshot.jpg
-
-# Page-scoped Word sources stay local; generated JSON is committed.
-/word/*.docx

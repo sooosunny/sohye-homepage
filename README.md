@@ -27,10 +27,11 @@ the recommended workflow for page-level editing:
 | Publications | `word/publications.docx` | `word/publications-ko.docx` | CV markers |
 | CV | `word/cv.docx` | `word/cv-ko.docx` | CV markers |
 
-The Word files are local-only and are not pushed to GitHub. The parser writes
-the public build inputs to `src/generated/pages/*.json`, and those generated
-JSON files are committed. A missing page document is safe: that page keeps its
-existing built-in content.
+The Word files are versioned with the project because they contain the public
+website content. The parser writes the public build inputs to
+`src/generated/pages/*.json`, and those generated JSON files are committed as
+well. A missing page document is safe: that page keeps its existing built-in
+content.
 
 To refresh every page, run:
 
@@ -46,8 +47,6 @@ To refresh only one page, use one of `npm run refresh:page:home`,
 The exact marker templates and examples are in [`word/README.md`](word/README.md).
 
 The older repository-root Word workflow remains available for compatibility.
-The public repository contains only generated website content and public PDF;
-the Word source documents remain local and intentionally ignored.
 When they are available at the repository root, refresh the generated output
 before committing a content update:
 
@@ -78,8 +77,8 @@ narratives:
 3. Run `npm run build` to verify the generated site.
 4. Commit the updated `src/generated/cv-data.json` and push it with the code.
 
-The Word file is intentionally local-only; the committed generated JSON is
-what GitHub Pages uses during deployment.
+The committed generated JSON is what GitHub Pages uses during deployment; the
+Word source is kept in the repository so it can be downloaded and edited.
 
 The Korean pages are generated from the English `site-content.docx` source.
 Existing reviewed translations in `scripts/cv/create_korean_site_content.py`
@@ -111,7 +110,7 @@ preview sections.
 
 | What to update | File |
 |---|---|
-| Update one page (local only) | `word/<page>.docx` |
+| Update one page | `word/<page>.docx` |
 | Update master CV (legacy local workflow) | `public/cv.docx` |
 | Update research narratives / teaching text (legacy local workflow) | `site-content.docx` |
 | Regenerate Korean site narratives / teaching text | `npm run generate:content:ko` |
