@@ -81,6 +81,9 @@ and Korean documents are parsed independently.
 
 ## Refresh and publish
 
+After editing a Word source and pushing it to `main`, GitHub Actions refreshes
+the page data automatically before building GitHub Pages.
+
 ```bash
 npm run refresh:page:research
 npm run build

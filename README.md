@@ -40,7 +40,11 @@ npm run refresh:pages
 npm run build
 ```
 
-To refresh only one page, use one of `npm run refresh:page:home`,
+GitHub Actions runs `npm run refresh:pages` automatically before every Pages
+build. Therefore, after editing a tracked `word/<page>.docx` and pushing it to
+`main`, the corresponding page is regenerated and deployed automatically.
+
+To refresh only one page locally, use one of `npm run refresh:page:home`,
 `npm run refresh:page:research`, `npm run refresh:page:teaching`,
 `npm run refresh:page:publications`, or `npm run refresh:page:cv`.
 
